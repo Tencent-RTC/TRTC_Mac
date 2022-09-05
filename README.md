@@ -30,9 +30,9 @@ For the release notes of earlier versions, click [More](https://www.tencentcloud
 
 
 ## Contact Us
-- If you have questions, see [FAQs](https://www.tencentcloud.com/document/product/647/42298).
+- If you have questions, see [FAQs](https://www.tencentcloud.com/document/product/647/36057).
 
-- To learn about how the TRTC SDK can be used in different scenarios, see [Sample Code](https://intl.cloud.tencent.com/document/product/647/42963).
+- To learn about how the TRTC SDK can be used in different scenarios, see [Sample Code](https://www.tencentcloud.com/document/product/647/42963).
 
 - For complete API documentation, see [SDK API Documentation](https://www.tencentcloud.com/document/product/647/35119).
 
