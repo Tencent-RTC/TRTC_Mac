@@ -1,6 +1,8 @@
 # TRTC SDK （Mac）
 
-Demo编译时会自动下载SDK到此目录。
+[简体中文](README-zh_CN.md) | English
 
-## 下载地址
-- Mac版：[DOWNLOAD](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_TRTC_Mac_latest.tar.bz2)
+When the demo is compiled, the SDK will be automatically downloaded to this directory.
+
+## Download URL
+- Mac TRTC ：[DOWNLOAD](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_TRTC_Mac_latest.tar.bz2)
