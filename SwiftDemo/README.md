@@ -1,4 +1,4 @@
-# TRTC精简版Demo
+# TRTC MacOS Demo (Swift)
 
 这个开源示例Demo主要演示如何基于 [TRTC 实时音视频 SDK](https://cloud.tencent.com/document/product/647/32689)，快速实现一些音视频场景的基本功能。
 
@@ -20,8 +20,7 @@
 2. 单击【立即开始】，输入应用名称，例如`TestTRTC`，单击【创建应用】。
 3. 单击【我已下载】，会看到页面上展示了您的 SDKAppID 和密钥。
 
-<span id="step3"></span>
-
+<span id="step2"></span>
 ### 步骤2：配置 Demo 工程中的AppID和密钥
 1. 打开工程中的 [GenerateTestUserSig.h](debug/GenerateTestUserSig.h) 文件
 2. 配置`GenerateTestUserSig.h`文件中的相关参数：
