@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="GKM-4m-cht">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="V6i-Tj-2xv">
+            <objects>
+                <windowController id="GKM-4m-cht" sceneMemberID="viewController">
+                    <window key="window" title="字符串房间号" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="S4B-fc-Y7n" userLabel="字符串房间号">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="462" width="352" height="577"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+                        <view key="contentView" id="f87-bh-ADE">
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="577"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="GKM-4m-cht" id="zd1-Yf-sC4"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="xde-KM-NA3" kind="relationship" relationship="window.shadowedContentViewController" id="F42-l5-9Ag"/>
+                    </connections>
+                </windowController>
+                <customObject id="10g-6I-g3m" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455" y="-25.5"/>
+        </scene>
+        <!--String Room Id Controller-->
+        <scene sceneID="yhg-EE-2zf">
+            <objects>
+                <viewController id="xde-KM-NA3" customClass="RTCStringRoomIdController" customModule="API_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <box key="view" appearanceType="aqua" boxType="custom" cornerRadius="4" title="Box" id="CLz-ZM-Nh1">
+                        <rect key="frame" x="0.0" y="0.0" width="384" height="610"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="35U-tX-yeV">
+                            <rect key="frame" x="1" y="1" width="382" height="608"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jqf-YK-eaR">
+                                    <rect key="frame" x="30" y="480" width="340" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="请输入房间号：" id="6a8-Rh-NVA">
+                                        <font key="font" metaFont="system" size="18"/>
+                                        <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppu-fS-bRb">
+                                    <rect key="frame" x="30" y="435" width="340" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="tZ8-Jp-Mw8">
+                                        <font key="font" metaFont="system" size="17"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg0-Cg-6S3">
+                                    <rect key="frame" x="30" y="382" width="340" height="23"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="请输入用户名：" id="s9q-E8-ePq">
+                                        <font key="font" metaFont="system" size="18"/>
+                                        <color key="textColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-r3-pcv">
+                                    <rect key="frame" x="30" y="337" width="340" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="wDQ-uL-DQn">
+                                        <font key="font" metaFont="system" size="18"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="m35-8v-jga">
+                                    <rect key="frame" x="30" y="90" width="340" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <view key="contentView" id="BKD-nh-sx9">
+                                        <rect key="frame" x="1" y="1" width="338" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-dM-PnY">
+                                                <rect key="frame" x="85" y="0.0" width="162" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <buttonCell key="cell" type="bevel" title="进入房间" bezelStyle="regularSquare" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="gxG-BU-JH0">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system" size="22"/>
+                                                </buttonCell>
+                                                <color key="contentTintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <connections>
+                                                    <segue destination="MvN-nC-ZVm" kind="show" identifier="enterRTCStringRoom" id="RE6-u8-ksb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </view>
+                                    <color key="fillColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                </box>
+                            </subviews>
+                        </view>
+                        <color key="fillColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </box>
+                    <connections>
+                        <outlet property="roomIdTextField" destination="Ppu-fS-bRb" id="Yll-R9-0Jl"/>
+                        <outlet property="userIdTextField" destination="Fyr-r3-pcv" id="fvB-V7-jY9"/>
+                    </connections>
+                </viewController>
+                <customObject id="laf-Q1-EiM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="-42"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="YTn-WH-wOR">
+            <objects>
+                <windowController id="MvN-nC-ZVm" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ED0-er-KkK">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="462" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+                        <view key="contentView" id="RsP-zC-N1d">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="MvN-nC-ZVm" id="une-tE-5tS"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="6yb-rE-Kak" kind="relationship" relationship="window.shadowedContentViewController" id="I9u-pq-Toe"/>
+                    </connections>
+                </windowController>
+                <customObject id="0xX-At-cwL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="-34"/>
+        </scene>
+        <!--String Room Id View Controller-->
+        <scene sceneID="ELK-A1-R2S">
+            <objects>
+                <viewController id="6yb-rE-Kak" customClass="RTCStringRoomIdViewController" customModule="API_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <box key="view" appearanceType="aqua" boxType="custom" borderWidth="0.0" title="Box" id="6f7-Bc-2kW">
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="716"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="KvD-bj-iUG">
+                            <rect key="frame" x="0.0" y="0.0" width="1280" height="716"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="FZC-NP-Dye" userLabel="localVideoView">
+                                    <rect key="frame" x="0.0" y="60" width="1280" height="656"/>
+                                </customView>
+                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="K4E-bT-ewG">
+                                    <rect key="frame" x="0.0" y="100" width="1280" height="616"/>
+                                    <subviews>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNg-bt-pg6">
+                                            <rect key="frame" x="1020" y="0.0" width="240" height="180"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="180" id="F9A-HR-Sgx"/>
+                                                <constraint firstAttribute="width" constant="240" id="KHV-HT-I7o"/>
+                                            </constraints>
+                                        </customView>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMW-wi-FTL">
+                                            <rect key="frame" x="1020" y="200" width="240" height="180"/>
+                                        </customView>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzF-L3-Irj">
+                                            <rect key="frame" x="1020" y="400" width="240" height="180"/>
+                                        </customView>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EbG-am-uyL">
+                                            <rect key="frame" x="20" y="0.0" width="240" height="180"/>
+                                        </customView>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7u-5P-FFG">
+                                            <rect key="frame" x="20" y="200" width="240" height="180"/>
+                                        </customView>
+                                        <customView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tO7-pR-CRy">
+                                            <rect key="frame" x="20" y="400" width="240" height="180"/>
+                                        </customView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qNg-bt-pg6" firstAttribute="centerX" secondItem="WMW-wi-FTL" secondAttribute="centerX" id="2bQ-7c-b1F"/>
+                                        <constraint firstItem="WMW-wi-FTL" firstAttribute="height" secondItem="UzF-L3-Irj" secondAttribute="height" id="2xK-Tv-cSL"/>
+                                        <constraint firstItem="EbG-am-uyL" firstAttribute="width" secondItem="U7u-5P-FFG" secondAttribute="width" id="Eja-pd-fay"/>
+                                        <constraint firstItem="EbG-am-uyL" firstAttribute="centerX" secondItem="U7u-5P-FFG" secondAttribute="centerX" id="Fod-8P-1CZ"/>
+                                        <constraint firstItem="EbG-am-uyL" firstAttribute="leading" secondItem="K4E-bT-ewG" secondAttribute="leading" constant="20" id="ILW-an-c1Z"/>
+                                        <constraint firstItem="qNg-bt-pg6" firstAttribute="top" secondItem="WMW-wi-FTL" secondAttribute="bottom" constant="20" id="J4O-Nn-OLN"/>
+                                        <constraint firstAttribute="trailing" secondItem="qNg-bt-pg6" secondAttribute="trailing" constant="20" id="Ok7-e0-gbb"/>
+                                        <constraint firstItem="U7u-5P-FFG" firstAttribute="height" secondItem="tO7-pR-CRy" secondAttribute="height" id="QCa-Fj-nQO"/>
+                                        <constraint firstItem="WMW-wi-FTL" firstAttribute="top" secondItem="UzF-L3-Irj" secondAttribute="bottom" constant="20" id="Sv3-3R-RLy"/>
+                                        <constraint firstItem="qNg-bt-pg6" firstAttribute="width" secondItem="WMW-wi-FTL" secondAttribute="width" id="V6H-aI-mxS"/>
+                                        <constraint firstItem="WMW-wi-FTL" firstAttribute="centerX" secondItem="UzF-L3-Irj" secondAttribute="centerX" id="WBG-Kk-XfG"/>
+                                        <constraint firstAttribute="bottom" secondItem="qNg-bt-pg6" secondAttribute="bottom" id="YZS-S3-kOx"/>
+                                        <constraint firstItem="EbG-am-uyL" firstAttribute="height" secondItem="U7u-5P-FFG" secondAttribute="height" id="ZtX-4S-bsw"/>
+                                        <constraint firstItem="WMW-wi-FTL" firstAttribute="width" secondItem="UzF-L3-Irj" secondAttribute="width" id="jYj-sK-h2I"/>
+                                        <constraint firstItem="qNg-bt-pg6" firstAttribute="width" secondItem="EbG-am-uyL" secondAttribute="width" id="mb9-fb-i4U"/>
+                                        <constraint firstItem="EbG-am-uyL" firstAttribute="top" secondItem="U7u-5P-FFG" secondAttribute="bottom" constant="20" id="psg-Rz-F8P"/>
+                                        <constraint firstItem="U7u-5P-FFG" firstAttribute="top" secondItem="tO7-pR-CRy" secondAttribute="bottom" constant="20" id="v0D-Pm-j2N"/>
+                                        <constraint firstAttribute="bottom" secondItem="EbG-am-uyL" secondAttribute="bottom" id="vAg-ig-WBx"/>
+                                        <constraint firstItem="qNg-bt-pg6" firstAttribute="height" secondItem="WMW-wi-FTL" secondAttribute="height" id="w9X-vd-ELP"/>
+                                        <constraint firstItem="U7u-5P-FFG" firstAttribute="width" secondItem="tO7-pR-CRy" secondAttribute="width" id="xxO-cj-NDz"/>
+                                        <constraint firstItem="qNg-bt-pg6" firstAttribute="height" secondItem="EbG-am-uyL" secondAttribute="height" id="yrU-Ji-ErK"/>
+                                        <constraint firstItem="U7u-5P-FFG" firstAttribute="centerX" secondItem="tO7-pR-CRy" secondAttribute="centerX" id="yur-zl-CV6"/>
+                                    </constraints>
+                                </customView>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbY-sx-7jF">
+                                    <rect key="frame" x="310" y="-4" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="rtc_mic_on" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="f9I-BE-b2W">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="onMicCaptureClicked:" target="6yb-rE-Kak" id="PiK-Gw-AaZ"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-Jr-mav">
+                                    <rect key="frame" x="460" y="-4" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="rtc_camera_on" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="Msp-lT-g1l">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="onExitRoomClicked:" target="6yb-rE-Kak" id="Qkp-Iw-12g"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tj9-bj-qfd">
+                                    <rect key="frame" x="910" y="-4" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="exit_room" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="NGY-aZ-LAt">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="onVideoCaptureClicked:" target="6yb-rE-Kak" id="2oZ-oY-QkC"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFf-C4-b18">
+                                    <rect key="frame" x="760" y="-4" width="60" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="dashboard" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="P3A-b8-FxR">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="onDashboardClicked:" target="6yb-rE-Kak" id="PfF-uL-rvu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="FZC-NP-Dye" secondAttribute="trailing" id="7Al-WF-tzD"/>
+                                <constraint firstAttribute="bottom" secondItem="FZC-NP-Dye" secondAttribute="bottom" constant="60" id="UFP-wt-zxD"/>
+                                <constraint firstAttribute="bottom" secondItem="K4E-bT-ewG" secondAttribute="bottom" constant="100" id="Yyi-Pv-2h6"/>
+                                <constraint firstAttribute="trailing" secondItem="K4E-bT-ewG" secondAttribute="trailing" id="ap5-uT-n7S"/>
+                                <constraint firstItem="K4E-bT-ewG" firstAttribute="top" secondItem="KvD-bj-iUG" secondAttribute="top" id="lcT-BA-4vw"/>
+                                <constraint firstItem="K4E-bT-ewG" firstAttribute="leading" secondItem="KvD-bj-iUG" secondAttribute="leading" id="qRc-aH-GkU"/>
+                                <constraint firstItem="FZC-NP-Dye" firstAttribute="top" secondItem="KvD-bj-iUG" secondAttribute="top" id="xof-FI-SKO"/>
+                                <constraint firstItem="FZC-NP-Dye" firstAttribute="leading" secondItem="KvD-bj-iUG" secondAttribute="leading" id="zXO-VR-Sxc"/>
+                            </constraints>
+                        </view>
+                        <color key="fillColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </box>
+                    <connections>
+                        <outlet property="localVideoView" destination="FZC-NP-Dye" id="wk0-d0-J5t"/>
+                        <outlet property="remoteVideoView" destination="K4E-bT-ewG" id="T2X-No-ao3"/>
+                    </connections>
+                </viewController>
+                <customObject id="xF1-Wi-v1X" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController objectClassName="NSView" id="VFh-g0-B16">
+                    <declaredKeys>
+                        <string>Key</string>
+                        <string>Key</string>
+                        <string>Key</string>
+                        <string>Key</string>
+                        <string>Key</string>
+                        <string>Key</string>
+                    </declaredKeys>
+                    <classReference key="objectClass" className="NSView"/>
+                </arrayController>
+            </objects>
+            <point key="canvasLocation" x="1006" y="697"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dashboard" width="30" height="30"/>
+        <image name="exit_room" width="30" height="30"/>
+        <image name="rtc_camera_on" width="30" height="30"/>
+        <image name="rtc_mic_on" width="30" height="30"/>
+    </resources>
+</document>
