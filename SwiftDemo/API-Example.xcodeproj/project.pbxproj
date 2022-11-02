@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C1F4CEE28A633B700E50E40 /* GenerateTestUserSig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D4DD128A53ECB00636440 /* GenerateTestUserSig.swift */; };
+		3C57A6342897EB6E00F16D7B /* RTCLocalRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6192897EB6D00F16D7B /* RTCLocalRecordViewController.swift */; };
+		3C57A6352897EB6E00F16D7B /* RTCLocalRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A61A2897EB6D00F16D7B /* RTCLocalRecord.storyboard */; };
+		3C57A6362897EB6E00F16D7B /* RTCLocalRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A61B2897EB6D00F16D7B /* RTCLocalRecordController.swift */; };
+		3C57A6372897EB6E00F16D7B /* RTCSetAudioQuality.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A61D2897EB6D00F16D7B /* RTCSetAudioQuality.storyboard */; };
+		3C57A6382897EB6E00F16D7B /* RTCSetAudioQualityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A61E2897EB6D00F16D7B /* RTCSetAudioQualityController.swift */; };
+		3C57A6392897EB6E00F16D7B /* RTCSetAudioQualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A61F2897EB6D00F16D7B /* RTCSetAudioQualityViewController.swift */; };
+		3C57A63A2897EB6E00F16D7B /* RTCEntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6212897EB6D00F16D7B /* RTCEntranceViewController.swift */; };
+		3C57A63B2897EB6E00F16D7B /* RTCInteractiveVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A6222897EB6D00F16D7B /* RTCInteractiveVideo.storyboard */; };
+		3C57A63C2897EB6E00F16D7B /* RTCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6232897EB6D00F16D7B /* RTCViewController.swift */; };
+		3C57A63D2897EB6E00F16D7B /* RTCSetAudioEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6252897EB6D00F16D7B /* RTCSetAudioEffectViewController.swift */; };
+		3C57A63E2897EB6E00F16D7B /* RTCSetAudioEffect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A6262897EB6D00F16D7B /* RTCSetAudioEffect.storyboard */; };
+		3C57A63F2897EB6E00F16D7B /* RTCSetAudioEffectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6272897EB6D00F16D7B /* RTCSetAudioEffectController.swift */; };
+		3C57A6402897EB6E00F16D7B /* RTCSetBackgroundMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6292897EB6E00F16D7B /* RTCSetBackgroundMusicViewController.swift */; };
+		3C57A6412897EB6E00F16D7B /* RTCSetBackgroundMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A62A2897EB6E00F16D7B /* RTCSetBackgroundMusicController.swift */; };
+		3C57A6422897EB6E00F16D7B /* RTCSetBackgroundMusic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A62B2897EB6E00F16D7B /* RTCSetBackgroundMusic.storyboard */; };
+		3C57A6432897EB6E00F16D7B /* RTCSetVideoQualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A62D2897EB6E00F16D7B /* RTCSetVideoQualityViewController.swift */; };
+		3C57A6442897EB6E00F16D7B /* RTCSetVideoQuality.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A62E2897EB6E00F16D7B /* RTCSetVideoQuality.storyboard */; };
+		3C57A6452897EB6E00F16D7B /* RTCSetVideoQualityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A62F2897EB6E00F16D7B /* RTCSetVideoQualityController.swift */; };
+		3C57A6462897EB6E00F16D7B /* RTCStringRoomId.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A6312897EB6E00F16D7B /* RTCStringRoomId.storyboard */; };
+		3C57A6472897EB6E00F16D7B /* RTCStringRoomIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6322897EB6E00F16D7B /* RTCStringRoomIdViewController.swift */; };
+		3C57A6482897EB6E00F16D7B /* RTCStringRoomIdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A6332897EB6E00F16D7B /* RTCStringRoomIdController.swift */; };
+		3C57A64B2897EB9700F16D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C57A6492897EB9700F16D7B /* Main.storyboard */; };
+		3C57A64C2897EB9700F16D7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C57A64A2897EB9700F16D7B /* MainViewController.swift */; };
+		3C66877E28A4ACE5003E766E /* RTCCustomCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66877928A4ACE5003E766E /* RTCCustomCaptureController.swift */; };
+		3C66877F28A4ACE5003E766E /* RTCCustomCameraFrameRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66877A28A4ACE5003E766E /* RTCCustomCameraFrameRender.swift */; };
+		3C66878028A4ACE5003E766E /* RTCCustomCamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C66877B28A4ACE5003E766E /* RTCCustomCamera.storyboard */; };
+		3C66878128A4ACE5003E766E /* RTCCustomCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66877C28A4ACE5003E766E /* RTCCustomCaptureViewController.swift */; };
+		3C66878228A4ACE5003E766E /* RTCCustomCameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66877D28A4ACE5003E766E /* RTCCustomCameraHelper.swift */; };
+		3C66878728A4DC60003E766E /* RTCScreenSharingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66878428A4DC60003E766E /* RTCScreenSharingController.swift */; };
+		3C66878828A4DC60003E766E /* RTCScreenSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66878528A4DC60003E766E /* RTCScreenSharingViewController.swift */; };
+		3C66878928A4DC60003E766E /* RTCScreenSharing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C66878628A4DC60003E766E /* RTCScreenSharing.storyboard */; };
+		404ECB3A288F8AD100A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB36288F8ABE00A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		404ECB3D288F8AE000A10CC4 /* TXFFmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		404ECB3E288F8AE000A10CC4 /* TXFFmpeg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		404ECB3F288F8AE300A10CC4 /* TXSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		404ECB40288F8AE300A10CC4 /* TXSoundTouch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		404ECB43288F8B9B00A10CC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 404ECB42288F8B9B00A10CC4 /* Alamofire */; };
+		407D4D4C2877DE59004B30E3 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D4D4B2877DE59004B30E3 /* MetalKit.framework */; };
+		407D4D4E2877DE65004B30E3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */; };
+		FD06A98C2493AE56007A25EB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06A98B2493AE56007A25EB /* Accelerate.framework */; };
+		FD1986A02445FD2800E0819A /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD19869F2445FD2800E0819A /* libresolv.tbd */; };
+		FD57DBEC2445F8F800C44C47 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */; };
+		FDB22483241F365C00E99DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB22482241F365C00E99DE2 /* AppDelegate.swift */; };
+		FDB22487241F365D00E99DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB22486241F365D00E99DE2 /* Assets.xcassets */; };
+		FDB9D9E32420ED840040A0F4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBE1FE5241F940900290D0B /* libc++.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		407D4D552877DE81004B30E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				404ECB3E288F8AE000A10CC4 /* TXFFmpeg.xcframework in Embed Frameworks */,
+				404ECB40288F8AE300A10CC4 /* TXSoundTouch.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C57A6192897EB6D00F16D7B /* RTCLocalRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCLocalRecordViewController.swift; sourceTree = "<group>"; };
+		3C57A61A2897EB6D00F16D7B /* RTCLocalRecord.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCLocalRecord.storyboard; sourceTree = "<group>"; };
+		3C57A61B2897EB6D00F16D7B /* RTCLocalRecordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCLocalRecordController.swift; sourceTree = "<group>"; };
+		3C57A61D2897EB6D00F16D7B /* RTCSetAudioQuality.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCSetAudioQuality.storyboard; sourceTree = "<group>"; };
+		3C57A61E2897EB6D00F16D7B /* RTCSetAudioQualityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetAudioQualityController.swift; sourceTree = "<group>"; };
+		3C57A61F2897EB6D00F16D7B /* RTCSetAudioQualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetAudioQualityViewController.swift; sourceTree = "<group>"; };
+		3C57A6212897EB6D00F16D7B /* RTCEntranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCEntranceViewController.swift; sourceTree = "<group>"; };
+		3C57A6222897EB6D00F16D7B /* RTCInteractiveVideo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCInteractiveVideo.storyboard; sourceTree = "<group>"; };
+		3C57A6232897EB6D00F16D7B /* RTCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCViewController.swift; sourceTree = "<group>"; };
+		3C57A6252897EB6D00F16D7B /* RTCSetAudioEffectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetAudioEffectViewController.swift; sourceTree = "<group>"; };
+		3C57A6262897EB6D00F16D7B /* RTCSetAudioEffect.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCSetAudioEffect.storyboard; sourceTree = "<group>"; };
+		3C57A6272897EB6D00F16D7B /* RTCSetAudioEffectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetAudioEffectController.swift; sourceTree = "<group>"; };
+		3C57A6292897EB6E00F16D7B /* RTCSetBackgroundMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetBackgroundMusicViewController.swift; sourceTree = "<group>"; };
+		3C57A62A2897EB6E00F16D7B /* RTCSetBackgroundMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetBackgroundMusicController.swift; sourceTree = "<group>"; };
+		3C57A62B2897EB6E00F16D7B /* RTCSetBackgroundMusic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCSetBackgroundMusic.storyboard; sourceTree = "<group>"; };
+		3C57A62D2897EB6E00F16D7B /* RTCSetVideoQualityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetVideoQualityViewController.swift; sourceTree = "<group>"; };
+		3C57A62E2897EB6E00F16D7B /* RTCSetVideoQuality.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCSetVideoQuality.storyboard; sourceTree = "<group>"; };
+		3C57A62F2897EB6E00F16D7B /* RTCSetVideoQualityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSetVideoQualityController.swift; sourceTree = "<group>"; };
+		3C57A6312897EB6E00F16D7B /* RTCStringRoomId.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCStringRoomId.storyboard; sourceTree = "<group>"; };
+		3C57A6322897EB6E00F16D7B /* RTCStringRoomIdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCStringRoomIdViewController.swift; sourceTree = "<group>"; };
+		3C57A6332897EB6E00F16D7B /* RTCStringRoomIdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCStringRoomIdController.swift; sourceTree = "<group>"; };
+		3C57A6492897EB9700F16D7B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3C57A64A2897EB9700F16D7B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3C66877928A4ACE5003E766E /* RTCCustomCaptureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCCustomCaptureController.swift; sourceTree = "<group>"; };
+		3C66877A28A4ACE5003E766E /* RTCCustomCameraFrameRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCCustomCameraFrameRender.swift; sourceTree = "<group>"; };
+		3C66877B28A4ACE5003E766E /* RTCCustomCamera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCCustomCamera.storyboard; sourceTree = "<group>"; };
+		3C66877C28A4ACE5003E766E /* RTCCustomCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCCustomCaptureViewController.swift; sourceTree = "<group>"; };
+		3C66877D28A4ACE5003E766E /* RTCCustomCameraHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCCustomCameraHelper.swift; sourceTree = "<group>"; };
+		3C66878428A4DC60003E766E /* RTCScreenSharingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCScreenSharingController.swift; sourceTree = "<group>"; };
+		3C66878528A4DC60003E766E /* RTCScreenSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCScreenSharingViewController.swift; sourceTree = "<group>"; };
+		3C66878628A4DC60003E766E /* RTCScreenSharing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCScreenSharing.storyboard; sourceTree = "<group>"; };
+		3C8D4DD128A53ECB00636440 /* GenerateTestUserSig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateTestUserSig.swift; sourceTree = "<group>"; };
+		404ECB36288F8ABE00A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_TRTC_Mac.framework; sourceTree = "<group>"; };
+		404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXSoundTouch.xcframework; sourceTree = "<group>"; };
+		404ECB38288F8ABE00A10CC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXFFmpeg.xcframework; sourceTree = "<group>"; };
+		407D4D4B2877DE59004B30E3 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FD06A98B2493AE56007A25EB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FD19869F2445FD2800E0819A /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		FDB2247F241F365C00E99DE2 /* API-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB22482241F365C00E99DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDB22486241F365D00E99DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDB2248B241F365D00E99DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBE1FE5241F940900290D0B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FDBE1FE7241F941100290D0B /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		FDD7B2C2241F55D000786F84 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDB2247C241F365C00E99DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD1986A02445FD2800E0819A /* libresolv.tbd in Frameworks */,
+				404ECB3A288F8AD100A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */,
+				FDB9D9E32420ED840040A0F4 /* libc++.tbd in Frameworks */,
+				404ECB3D288F8AE000A10CC4 /* TXFFmpeg.xcframework in Frameworks */,
+				FD57DBEC2445F8F800C44C47 /* AudioUnit.framework in Frameworks */,
+				404ECB43288F8B9B00A10CC4 /* Alamofire in Frameworks */,
+				FD06A98C2493AE56007A25EB /* Accelerate.framework in Frameworks */,
+				407D4D4C2877DE59004B30E3 /* MetalKit.framework in Frameworks */,
+				407D4D4E2877DE65004B30E3 /* SystemConfiguration.framework in Frameworks */,
+				404ECB3F288F8AE300A10CC4 /* TXSoundTouch.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C57A6182897EB6D00F16D7B /* LocalRecord */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A6192897EB6D00F16D7B /* RTCLocalRecordViewController.swift */,
+				3C57A61A2897EB6D00F16D7B /* RTCLocalRecord.storyboard */,
+				3C57A61B2897EB6D00F16D7B /* RTCLocalRecordController.swift */,
+			);
+			path = LocalRecord;
+			sourceTree = "<group>";
+		};
+		3C57A61C2897EB6D00F16D7B /* SetAudioQuality */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A61D2897EB6D00F16D7B /* RTCSetAudioQuality.storyboard */,
+				3C57A61E2897EB6D00F16D7B /* RTCSetAudioQualityController.swift */,
+				3C57A61F2897EB6D00F16D7B /* RTCSetAudioQualityViewController.swift */,
+			);
+			path = SetAudioQuality;
+			sourceTree = "<group>";
+		};
+		3C57A6202897EB6D00F16D7B /* InteractiveVideo */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A6212897EB6D00F16D7B /* RTCEntranceViewController.swift */,
+				3C57A6222897EB6D00F16D7B /* RTCInteractiveVideo.storyboard */,
+				3C57A6232897EB6D00F16D7B /* RTCViewController.swift */,
+			);
+			path = InteractiveVideo;
+			sourceTree = "<group>";
+		};
+		3C57A6242897EB6D00F16D7B /* SetAudioEffect */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A6252897EB6D00F16D7B /* RTCSetAudioEffectViewController.swift */,
+				3C57A6262897EB6D00F16D7B /* RTCSetAudioEffect.storyboard */,
+				3C57A6272897EB6D00F16D7B /* RTCSetAudioEffectController.swift */,
+			);
+			path = SetAudioEffect;
+			sourceTree = "<group>";
+		};
+		3C57A6282897EB6E00F16D7B /* SetBackgroundMusic */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A6292897EB6E00F16D7B /* RTCSetBackgroundMusicViewController.swift */,
+				3C57A62A2897EB6E00F16D7B /* RTCSetBackgroundMusicController.swift */,
+				3C57A62B2897EB6E00F16D7B /* RTCSetBackgroundMusic.storyboard */,
+			);
+			path = SetBackgroundMusic;
+			sourceTree = "<group>";
+		};
+		3C57A62C2897EB6E00F16D7B /* SetVideoQuality */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A62D2897EB6E00F16D7B /* RTCSetVideoQualityViewController.swift */,
+				3C57A62E2897EB6E00F16D7B /* RTCSetVideoQuality.storyboard */,
+				3C57A62F2897EB6E00F16D7B /* RTCSetVideoQualityController.swift */,
+			);
+			path = SetVideoQuality;
+			sourceTree = "<group>";
+		};
+		3C57A6302897EB6E00F16D7B /* StringRoomId */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A6312897EB6E00F16D7B /* RTCStringRoomId.storyboard */,
+				3C57A6322897EB6E00F16D7B /* RTCStringRoomIdViewController.swift */,
+				3C57A6332897EB6E00F16D7B /* RTCStringRoomIdController.swift */,
+			);
+			path = StringRoomId;
+			sourceTree = "<group>";
+		};
+		3C66877828A4ACE5003E766E /* CustomCamera */ = {
+			isa = PBXGroup;
+			children = (
+				3C66877928A4ACE5003E766E /* RTCCustomCaptureController.swift */,
+				3C66877A28A4ACE5003E766E /* RTCCustomCameraFrameRender.swift */,
+				3C66877B28A4ACE5003E766E /* RTCCustomCamera.storyboard */,
+				3C66877C28A4ACE5003E766E /* RTCCustomCaptureViewController.swift */,
+				3C66877D28A4ACE5003E766E /* RTCCustomCameraHelper.swift */,
+			);
+			path = CustomCamera;
+			sourceTree = "<group>";
+		};
+		3C66878328A4DC60003E766E /* ScreenSharing */ = {
+			isa = PBXGroup;
+			children = (
+				3C66878428A4DC60003E766E /* RTCScreenSharingController.swift */,
+				3C66878528A4DC60003E766E /* RTCScreenSharingViewController.swift */,
+				3C66878628A4DC60003E766E /* RTCScreenSharing.storyboard */,
+			);
+			path = ScreenSharing;
+			sourceTree = "<group>";
+		};
+		3C8D4DD028A53ECB00636440 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D4DD128A53ECB00636440 /* GenerateTestUserSig.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		404ECB35288F8ABE00A10CC4 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				404ECB36288F8ABE00A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework */,
+				404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */,
+				404ECB38288F8ABE00A10CC4 /* README.md */,
+				404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */,
+			);
+			name = SDK;
+			path = ../SDK;
+			sourceTree = "<group>";
+		};
+		FDB22476241F365C00E99DE2 = {
+			isa = PBXGroup;
+			children = (
+				3C8D4DD028A53ECB00636440 /* Debug */,
+				404ECB35288F8ABE00A10CC4 /* SDK */,
+				FDD7B2C2241F55D000786F84 /* README.md */,
+				FDD7B2C4241F55DE00786F84 /* RTC */,
+				FDD7B2CA241F560800786F84 /* Main */,
+				FDB22481241F365C00E99DE2 /* App */,
+				FDB22480241F365C00E99DE2 /* Products */,
+				FDBE1FE1241F92FA00290D0B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDB22480241F365C00E99DE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDB2247F241F365C00E99DE2 /* API-Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDB22481241F365C00E99DE2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FDB22482241F365C00E99DE2 /* AppDelegate.swift */,
+				FDB22486241F365D00E99DE2 /* Assets.xcassets */,
+				FDB2248B241F365D00E99DE2 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDBE1FE1241F92FA00290D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */,
+				407D4D4B2877DE59004B30E3 /* MetalKit.framework */,
+				FD06A98B2493AE56007A25EB /* Accelerate.framework */,
+				FD19869F2445FD2800E0819A /* libresolv.tbd */,
+				FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */,
+				FDBE1FE7241F941100290D0B /* libiconv.tbd */,
+				FDBE1FE5241F940900290D0B /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDD7B2C4241F55DE00786F84 /* RTC */ = {
+			isa = PBXGroup;
+			children = (
+				3C66878328A4DC60003E766E /* ScreenSharing */,
+				3C66877828A4ACE5003E766E /* CustomCamera */,
+				3C57A6202897EB6D00F16D7B /* InteractiveVideo */,
+				3C57A6182897EB6D00F16D7B /* LocalRecord */,
+				3C57A6242897EB6D00F16D7B /* SetAudioEffect */,
+				3C57A61C2897EB6D00F16D7B /* SetAudioQuality */,
+				3C57A6282897EB6E00F16D7B /* SetBackgroundMusic */,
+				3C57A62C2897EB6E00F16D7B /* SetVideoQuality */,
+				3C57A6302897EB6E00F16D7B /* StringRoomId */,
+			);
+			path = RTC;
+			sourceTree = "<group>";
+		};
+		FDD7B2CA241F560800786F84 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3C57A6492897EB9700F16D7B /* Main.storyboard */,
+				3C57A64A2897EB9700F16D7B /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDB2247E241F365C00E99DE2 /* API-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDB2248F241F365D00E99DE2 /* Build configuration list for PBXNativeTarget "API-Example" */;
+			buildPhases = (
+				FDB2247B241F365C00E99DE2 /* Sources */,
+				FDB2247C241F365C00E99DE2 /* Frameworks */,
+				FDB2247D241F365C00E99DE2 /* Resources */,
+				407D4D552877DE81004B30E3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "API-Example";
+			packageProductDependencies = (
+				404ECB42288F8B9B00A10CC4 /* Alamofire */,
+			);
+			productName = TRTCSimpleDemo;
+			productReference = FDB2247F241F365C00E99DE2 /* API-Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDB22477241F365C00E99DE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = tencent;
+				TargetAttributes = {
+					FDB2247E241F365C00E99DE2 = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = FDB2247A241F365C00E99DE2 /* Build configuration list for PBXProject "API-Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDB22476241F365C00E99DE2;
+			packageReferences = (
+				404ECB41288F8B9B00A10CC4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = FDB22480241F365C00E99DE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDB2247E241F365C00E99DE2 /* API-Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDB2247D241F365C00E99DE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C57A6372897EB6E00F16D7B /* RTCSetAudioQuality.storyboard in Resources */,
+				3C57A6442897EB6E00F16D7B /* RTCSetVideoQuality.storyboard in Resources */,
+				FDB22487241F365D00E99DE2 /* Assets.xcassets in Resources */,
+				3C57A63B2897EB6E00F16D7B /* RTCInteractiveVideo.storyboard in Resources */,
+				3C57A6462897EB6E00F16D7B /* RTCStringRoomId.storyboard in Resources */,
+				3C57A64B2897EB9700F16D7B /* Main.storyboard in Resources */,
+				3C57A63E2897EB6E00F16D7B /* RTCSetAudioEffect.storyboard in Resources */,
+				3C66878928A4DC60003E766E /* RTCScreenSharing.storyboard in Resources */,
+				3C57A6352897EB6E00F16D7B /* RTCLocalRecord.storyboard in Resources */,
+				3C57A6422897EB6E00F16D7B /* RTCSetBackgroundMusic.storyboard in Resources */,
+				3C66878028A4ACE5003E766E /* RTCCustomCamera.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDB2247B241F365C00E99DE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C57A6402897EB6E00F16D7B /* RTCSetBackgroundMusicViewController.swift in Sources */,
+				3C57A6432897EB6E00F16D7B /* RTCSetVideoQualityViewController.swift in Sources */,
+				3C66878728A4DC60003E766E /* RTCScreenSharingController.swift in Sources */,
+				3C66878128A4ACE5003E766E /* RTCCustomCaptureViewController.swift in Sources */,
+				3C57A6472897EB6E00F16D7B /* RTCStringRoomIdViewController.swift in Sources */,
+				3C57A64C2897EB9700F16D7B /* MainViewController.swift in Sources */,
+				3C57A6452897EB6E00F16D7B /* RTCSetVideoQualityController.swift in Sources */,
+				3C1F4CEE28A633B700E50E40 /* GenerateTestUserSig.swift in Sources */,
+				3C57A6482897EB6E00F16D7B /* RTCStringRoomIdController.swift in Sources */,
+				3C66878228A4ACE5003E766E /* RTCCustomCameraHelper.swift in Sources */,
+				3C66878828A4DC60003E766E /* RTCScreenSharingViewController.swift in Sources */,
+				3C57A63A2897EB6E00F16D7B /* RTCEntranceViewController.swift in Sources */,
+				3C57A63C2897EB6E00F16D7B /* RTCViewController.swift in Sources */,
+				3C57A6382897EB6E00F16D7B /* RTCSetAudioQualityController.swift in Sources */,
+				3C57A63D2897EB6E00F16D7B /* RTCSetAudioEffectViewController.swift in Sources */,
+				3C57A6392897EB6E00F16D7B /* RTCSetAudioQualityViewController.swift in Sources */,
+				3C57A6412897EB6E00F16D7B /* RTCSetBackgroundMusicController.swift in Sources */,
+				3C57A6362897EB6E00F16D7B /* RTCLocalRecordController.swift in Sources */,
+				3C57A63F2897EB6E00F16D7B /* RTCSetAudioEffectController.swift in Sources */,
+				3C57A6342897EB6E00F16D7B /* RTCLocalRecordViewController.swift in Sources */,
+				3C66877E28A4ACE5003E766E /* RTCCustomCaptureController.swift in Sources */,
+				3C66877F28A4ACE5003E766E /* RTCCustomCameraFrameRender.swift in Sources */,
+				FDB22483241F365C00E99DE2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FDB2248D241F365D00E99DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDB2248E241F365D00E99DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		FDB22490241F365D00E99DE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SDK";
+				INFOPLIST_FILE = APP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.TRTCSimpleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		FDB22491241F365D00E99DE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SDK";
+				INFOPLIST_FILE = APP/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.TRTCSimpleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDB2247A241F365C00E99DE2 /* Build configuration list for PBXProject "API-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDB2248D241F365D00E99DE2 /* Debug */,
+				FDB2248E241F365D00E99DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDB2248F241F365D00E99DE2 /* Build configuration list for PBXNativeTarget "API-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDB22490241F365D00E99DE2 /* Debug */,
+				FDB22491241F365D00E99DE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		404ECB41288F8B9B00A10CC4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		404ECB42288F8B9B00A10CC4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 404ECB41288F8B9B00A10CC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FDB22477241F365C00E99DE2 /* Project object */;
+}
