@@ -2,7 +2,7 @@
  * Module:   GenerateTestUserSig
  *
  * Function: 用于生成测试用的 UserSig，UserSig 是腾讯云为其云服务设计的一种安全保护签名。
- *           其计算方法是对 SDKAppID、UserID 和 EXPIRETIME 进行加密，加密算法为 HMAC-SHA256。
+ *           其计算方法是对 SDKAPPID、UserID 和 EXPIRETIME 进行加密，加密算法为 HMAC-SHA256。
  *
  * Attention: 请不要将如下代码发布到您的线上正式版本的 App 中，原因如下：
  *
@@ -114,9 +114,6 @@ let PLAY_DOMAIN: String = ""
  */
 let SERVERLESSURL = ""
 
-
-let SDKAppID = 0
-
 class GenerateTestUserSig {
     /**
      * 计算 UserSig 签名
@@ -140,7 +137,7 @@ class GenerateTestUserSig {
         var obj: [String: Any] = [
             "TLS.ver": "2.0",
             "TLS.identifier": identifier,
-            "TLS.sdkappid":SDKAppID,
+            "TLS.sdkappid":SDKAPPID,
             "TLS.expire": EXPIRETIME,
             "TLS.time": TLSTime
         ]

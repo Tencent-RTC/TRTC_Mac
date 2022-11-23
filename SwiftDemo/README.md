@@ -25,13 +25,13 @@
  单击【[Github](https://github.com/tencentyun/TRTCSDK/tree/master/Mac)】跳转至 Github（或单击【[ZIP](https://liteav.sdk.qcloud.com/download/latest/TXLiteAVSDK_TRTC_Mac_latest.tar.bz2?_ga=1.195966252.185644906.1567570704)】）
   ![](https://main.qcloudimg.com/raw/3b6d17adff2348fa2363cd608e2e3802.png)
     
-2. 下载完成后，返回实时音视频控制台，单击【我已下载，下一步】，可以查看 SDKAppID 和密钥信息。
+2. 下载完成后，返回实时音视频控制台，单击【我已下载，下一步】，可以查看 SDKAPPID 和密钥信息。
 
 <span id="step3"></span>
 ### 步骤3：配置 Demo 工程中的AppID和密钥
 1. 打开[GenerateTestUserSig.h](debug/GenerateTestUserSig.h)文件
 2. 配置`GenerateTestUserSig.h`文件中的相关参数：
-  <ul><li>SDKAPPID：默认为0，请设置为实际的 SDKAppID。</li>
+  <ul><li>SDKAPPID：默认为0，请设置为实际的 SDKAPPID。</li>
   <li>SECRETKEY：默认为空字符串，请设置为实际的密钥信息。</li></ul> 
     <img src="https://main.qcloudimg.com/raw/15d986c5f4bc340e555630a070b90d63.png">
 3. 返回实时音视频控制台，单击【粘贴完成，下一步】。

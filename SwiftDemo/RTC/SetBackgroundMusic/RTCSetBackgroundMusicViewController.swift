@@ -79,7 +79,7 @@ class RTCSetBackgroundMusicViewController: NSViewController {
         window.title = "视频通话--房间\(roomId)"
         
         let param = TRTCParams.init()
-        param.sdkAppId = UInt32(SDKAppID)
+        param.sdkAppId = UInt32(SDKAPPID)
         param.roomId   = roomId
         param.userId   = userId
         param.role     = TRTCRoleType.anchor
