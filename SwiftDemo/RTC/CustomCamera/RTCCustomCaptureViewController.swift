@@ -72,7 +72,7 @@ class RTCCustomCaptureViewController: NSViewController {
     
     @IBAction func onCustomPushClicked(_ sender: NSButton) {
         let param = TRTCParams.init()
-        param.sdkAppId = UInt32(SDKAppID)
+        param.sdkAppId = UInt32(SDKAPPID)
         param.roomId   = roomId
         param.userId   = userId
         param.role     = TRTCRoleType.anchor
