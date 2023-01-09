@@ -47,6 +47,7 @@
 		404ECB43288F8B9B00A10CC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 404ECB42288F8B9B00A10CC4 /* Alamofire */; };
 		407D4D4C2877DE59004B30E3 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D4D4B2877DE59004B30E3 /* MetalKit.framework */; };
 		407D4D4E2877DE65004B30E3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */; };
+		B832DEBD296BFFA0003120CB /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B832DEBC296BFFA0003120CB /* ScreenCaptureKit.framework */; };
 		FD06A98C2493AE56007A25EB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06A98B2493AE56007A25EB /* Accelerate.framework */; };
 		FD1986A02445FD2800E0819A /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD19869F2445FD2800E0819A /* libresolv.tbd */; };
 		FD57DBEC2445F8F800C44C47 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */; };
@@ -109,6 +110,7 @@
 		404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXFFmpeg.xcframework; sourceTree = "<group>"; };
 		407D4D4B2877DE59004B30E3 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B832DEBC296BFFA0003120CB /* ScreenCaptureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenCaptureKit.framework; path = System/Library/Frameworks/ScreenCaptureKit.framework; sourceTree = SDKROOT; };
 		FD06A98B2493AE56007A25EB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		FD19869F2445FD2800E0819A /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B832DEBD296BFFA0003120CB /* ScreenCaptureKit.framework in Frameworks */,
 				FD1986A02445FD2800E0819A /* libresolv.tbd in Frameworks */,
 				404ECB3A288F8AD100A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */,
 				FDB9D9E32420ED840040A0F4 /* libc++.tbd in Frameworks */,
@@ -289,6 +292,7 @@
 		FDBE1FE1241F92FA00290D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B832DEBC296BFFA0003120CB /* ScreenCaptureKit.framework */,
 				407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */,
 				407D4D4B2877DE59004B30E3 /* MetalKit.framework */,
 				FD06A98B2493AE56007A25EB /* Accelerate.framework */,
