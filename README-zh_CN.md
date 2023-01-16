@@ -9,7 +9,6 @@ _[English](README.md) | 简体中文_
 > TRTC SDK 支持Web、Android、iOS、Mac、Windows以及Flutter、小程序等所有主流平台， [更多平台](https://github.com/LiteAVSDK?q=TRTC_&type=all&sort=)...
 
 ## 更新日志
-
 ### Version 10.9 @ 2023.01.09
 
 **新特性**

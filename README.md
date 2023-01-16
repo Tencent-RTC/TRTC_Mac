@@ -18,11 +18,11 @@ Leveraging Tencent's many years of experience in network and audio/video technol
 
 **Function optimization**
 
-- All platform: optimize the synchronization of audio and video, and improve the smoothness of video playback.
-- All platform: optimize the uplink delay in some weak network scenarios, and improve the interactive effect of video calls.
-- Windows&Android: Optimized the problem of popping sound after setting the music sound quality in a specific scene.
-- iOS: Optimized the external recording screen to automatically turn to the right side with the system orientation when the system switches between horizontal and vertical screens, improving the viewing experience.
-- Mac: Optimize the screen recording performance of MacOS 12.3 and later versions, reducing CPU overhead and memory usage.
+- All platforms: optimized the synchronization of audio and video, and improve the smoothness of video playback.
+- Full platform: optimized the uplink delay in some weak network scenarios, and improve the interactive effect of video calls.
+- Windows&Android: Optimized the problem that popping sounds are easy to occur after setting the music sound quality in specific scenarios.
+- iOS: Optimized the external recording screen to automatically turn to the right side when the system switches between horizontal and vertical screens, improving the viewing experience.
+- Mac: Optimized the screen recording performance of MacOS 12.3 and later versions, reducing CPU overhead and memory usage.
 - Android: Optimized the sound output problem that still exists after plugging in headphones under the media volume of a small number of models.
 
 For the release notes of earlier versions, click [More](https://www.tencentcloud.com/document/product/647/39426).
