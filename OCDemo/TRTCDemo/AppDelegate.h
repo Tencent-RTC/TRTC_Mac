@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TRTCSettingWindowController.h"
-#import "TRTCCloud.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
