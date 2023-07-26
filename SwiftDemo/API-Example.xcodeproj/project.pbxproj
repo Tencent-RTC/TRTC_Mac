@@ -39,7 +39,6 @@
 		3C66878728A4DC60003E766E /* RTCScreenSharingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66878428A4DC60003E766E /* RTCScreenSharingController.swift */; };
 		3C66878828A4DC60003E766E /* RTCScreenSharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C66878528A4DC60003E766E /* RTCScreenSharingViewController.swift */; };
 		3C66878928A4DC60003E766E /* RTCScreenSharing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C66878628A4DC60003E766E /* RTCScreenSharing.storyboard */; };
-		404ECB3A288F8AD100A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB36288F8ABE00A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		404ECB3D288F8AE000A10CC4 /* TXFFmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		404ECB3E288F8AE000A10CC4 /* TXFFmpeg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		404ECB3F288F8AE300A10CC4 /* TXSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -48,6 +47,7 @@
 		407D4D4C2877DE59004B30E3 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D4D4B2877DE59004B30E3 /* MetalKit.framework */; };
 		407D4D4E2877DE65004B30E3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */; };
 		B832DEBD296BFFA0003120CB /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B832DEBC296BFFA0003120CB /* ScreenCaptureKit.framework */; };
+		B87427522A711E6F006AD332 /* TXLiteAVSDK_TRTC_Mac.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87427512A711E6F006AD332 /* TXLiteAVSDK_TRTC_Mac.xcframework */; };
 		FD06A98C2493AE56007A25EB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD06A98B2493AE56007A25EB /* Accelerate.framework */; };
 		FD1986A02445FD2800E0819A /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FD19869F2445FD2800E0819A /* libresolv.tbd */; };
 		FD57DBEC2445F8F800C44C47 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */; };
@@ -104,13 +104,13 @@
 		3C66878528A4DC60003E766E /* RTCScreenSharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCScreenSharingViewController.swift; sourceTree = "<group>"; };
 		3C66878628A4DC60003E766E /* RTCScreenSharing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RTCScreenSharing.storyboard; sourceTree = "<group>"; };
 		3C8D4DD128A53ECB00636440 /* GenerateTestUserSig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateTestUserSig.swift; sourceTree = "<group>"; };
-		404ECB36288F8ABE00A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_TRTC_Mac.framework; sourceTree = "<group>"; };
 		404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXSoundTouch.xcframework; sourceTree = "<group>"; };
 		404ECB38288F8ABE00A10CC4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXFFmpeg.xcframework; sourceTree = "<group>"; };
 		407D4D4B2877DE59004B30E3 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		407D4D4D2877DE65004B30E3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B832DEBC296BFFA0003120CB /* ScreenCaptureKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenCaptureKit.framework; path = System/Library/Frameworks/ScreenCaptureKit.framework; sourceTree = SDKROOT; };
+		B87427512A711E6F006AD332 /* TXLiteAVSDK_TRTC_Mac.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXLiteAVSDK_TRTC_Mac.xcframework; sourceTree = "<group>"; };
 		FD06A98B2493AE56007A25EB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		FD19869F2445FD2800E0819A /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		FD57DBEB2445F8F800C44C47 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
@@ -130,7 +130,6 @@
 			files = (
 				B832DEBD296BFFA0003120CB /* ScreenCaptureKit.framework in Frameworks */,
 				FD1986A02445FD2800E0819A /* libresolv.tbd in Frameworks */,
-				404ECB3A288F8AD100A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */,
 				FDB9D9E32420ED840040A0F4 /* libc++.tbd in Frameworks */,
 				404ECB3D288F8AE000A10CC4 /* TXFFmpeg.xcframework in Frameworks */,
 				FD57DBEC2445F8F800C44C47 /* AudioUnit.framework in Frameworks */,
@@ -138,6 +137,7 @@
 				FD06A98C2493AE56007A25EB /* Accelerate.framework in Frameworks */,
 				407D4D4C2877DE59004B30E3 /* MetalKit.framework in Frameworks */,
 				407D4D4E2877DE65004B30E3 /* SystemConfiguration.framework in Frameworks */,
+				B87427522A711E6F006AD332 /* TXLiteAVSDK_TRTC_Mac.xcframework in Frameworks */,
 				404ECB3F288F8AE300A10CC4 /* TXSoundTouch.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +248,7 @@
 		404ECB35288F8ABE00A10CC4 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				404ECB36288F8ABE00A10CC4 /* TXLiteAVSDK_TRTC_Mac.framework */,
+				B87427512A711E6F006AD332 /* TXLiteAVSDK_TRTC_Mac.xcframework */,
 				404ECB37288F8ABE00A10CC4 /* TXSoundTouch.xcframework */,
 				404ECB38288F8ABE00A10CC4 /* README.md */,
 				404ECB39288F8ABE00A10CC4 /* TXFFmpeg.xcframework */,

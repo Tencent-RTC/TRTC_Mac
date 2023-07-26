@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		06D5A6B024160A4A00296793 /* TRTCUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D5A6A924160A4A00296793 /* TRTCUserManager.m */; };
 		06D5A6B424160A6500296793 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06D5A6B224160A6500296793 /* test.mp3 */; };
 		06D5A6B524160A6500296793 /* bgm_demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06D5A6B324160A6500296793 /* bgm_demo.mp3 */; };
+		329F29FC427F0B3B3AD45439 /* libPods-TRTCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6884FF8D8DC079BF5FC6B480 /* libPods-TRTCDemo.a */; };
 		453167F221E45560007A91CB /* TRTCNewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 453167EF21E4555F007A91CB /* TRTCNewWindowController.m */; };
 		453167F321E45560007A91CB /* TRTCNewWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453167F021E4555F007A91CB /* TRTCNewWindowController.xib */; };
 		457A707B2200814E00DD193B /* CaptureSourceCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457A70702200814D00DD193B /* CaptureSourceCollectionItem.xib */; };
@@ -34,11 +35,6 @@
 		45F96FC9223296E600E861EC /* TRTCApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F96FC7223296E600E861EC /* TRTCApp.m */; };
 		A0933EBA232111B400565F64 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A0933EB9232111B400565F64 /* libc++.tbd */; };
 		A0933EBC232111BA00565F64 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0933EBB232111BA00565F64 /* OpenAL.framework */; };
-		C6770F87296E69A9009B32F4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F7D296E6992009B32F4 /* TXLiteAVSDK_TRTC_Mac.framework */; };
-		C6770F8A296E69AD009B32F4 /* TXFFmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F80296E6992009B32F4 /* TXFFmpeg.xcframework */; };
-		C6770F8B296E69AD009B32F4 /* TXFFmpeg.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F80296E6992009B32F4 /* TXFFmpeg.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C6770F8C296E69B0009B32F4 /* TXSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F7E296E6992009B32F4 /* TXSoundTouch.xcframework */; };
-		C6770F8D296E69B0009B32F4 /* TXSoundTouch.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F7E296E6992009B32F4 /* TXSoundTouch.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C6770F8F296E69CB009B32F4 /* ScreenCaptureKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F8E296E69CB009B32F4 /* ScreenCaptureKit.framework */; };
 		C6770F91296E6A1F009B32F4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6770F90296E6A1E009B32F4 /* SystemConfiguration.framework */; };
 		D689A93121CC97F300C7C618 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D689A93021CC97F300C7C618 /* AppDelegate.m */; };
@@ -49,21 +45,6 @@
 		FD7773EF2493EC610025AD65 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7773EE2493EC610025AD65 /* Accelerate.framework */; };
 		FD7773F12493EC690025AD65 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD7773F02493EC690025AD65 /* AudioUnit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C6770F89296E69AA009B32F4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C6770F8D296E69B0009B32F4 /* TXSoundTouch.xcframework in Embed Frameworks */,
-				C6770F8B296E69AD009B32F4 /* TXFFmpeg.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		066D98C424003BD500912A89 /* TRTCMainWindowAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRTCMainWindowAccessory.xib; sourceTree = "<group>"; };
@@ -107,8 +88,11 @@
 		45AD95BE21D72C0F007B2EAF /* TRTCMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTCMainWindowController.m; sourceTree = "<group>"; };
 		45F96FC7223296E600E861EC /* TRTCApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTCApp.m; sourceTree = "<group>"; };
 		45F96FC8223296E600E861EC /* TRTCApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTCApp.h; sourceTree = "<group>"; };
+		6884FF8D8DC079BF5FC6B480 /* libPods-TRTCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRTCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E977B39B967AE4CE58D55B /* Pods-TRTCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRTCDemo.debug.xcconfig"; path = "Target Support Files/Pods-TRTCDemo/Pods-TRTCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A0933EB9232111B400565F64 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A0933EBB232111BA00565F64 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		BC30FB4479A04A44E35AF2C7 /* Pods-TRTCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRTCDemo.release.xcconfig"; path = "Target Support Files/Pods-TRTCDemo/Pods-TRTCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C6770F7D296E6992009B32F4 /* TXLiteAVSDK_TRTC_Mac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_TRTC_Mac.framework; sourceTree = "<group>"; };
 		C6770F7E296E6992009B32F4 /* TXSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXSoundTouch.xcframework; sourceTree = "<group>"; };
 		C6770F80296E6992009B32F4 /* TXFFmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TXFFmpeg.xcframework; sourceTree = "<group>"; };
@@ -133,15 +117,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6770F87296E69A9009B32F4 /* TXLiteAVSDK_TRTC_Mac.framework in Frameworks */,
 				C6770F91296E6A1F009B32F4 /* SystemConfiguration.framework in Frameworks */,
 				FD7773F12493EC690025AD65 /* AudioUnit.framework in Frameworks */,
 				C6770F8F296E69CB009B32F4 /* ScreenCaptureKit.framework in Frameworks */,
-				C6770F8C296E69B0009B32F4 /* TXSoundTouch.xcframework in Frameworks */,
 				FD7773EF2493EC610025AD65 /* Accelerate.framework in Frameworks */,
 				A0933EBC232111BA00565F64 /* OpenAL.framework in Frameworks */,
-				C6770F8A296E69AD009B32F4 /* TXFFmpeg.xcframework in Frameworks */,
 				A0933EBA232111B400565F64 /* libc++.tbd in Frameworks */,
+				329F29FC427F0B3B3AD45439 /* libPods-TRTCDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +180,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		110D409576E7B9FC30E3FF21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E977B39B967AE4CE58D55B /* Pods-TRTCDemo.debug.xcconfig */,
+				BC30FB4479A04A44E35AF2C7 /* Pods-TRTCDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		457A706F2200814D00DD193B /* CaptureSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +233,7 @@
 				D689A92E21CC97F300C7C618 /* TRTCDemo */,
 				D689A92D21CC97F300C7C618 /* Products */,
 				D689A96621CCADD600C7C618 /* Frameworks */,
+				110D409576E7B9FC30E3FF21 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +299,7 @@
 				FD7773EE2493EC610025AD65 /* Accelerate.framework */,
 				A0933EBB232111BA00565F64 /* OpenAL.framework */,
 				A0933EB9232111B400565F64 /* libc++.tbd */,
+				6884FF8D8DC079BF5FC6B480 /* libPods-TRTCDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,11 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D689A94021CC97F400C7C618 /* Build configuration list for PBXNativeTarget "TRTCDemo" */;
 			buildPhases = (
+				6CC61453168F6A27C89796E9 /* [CP] Check Pods Manifest.lock */,
 				A0933EB6232110E700565F64 /* Download SDK */,
 				D689A92821CC97F300C7C618 /* Sources */,
 				D689A92921CC97F300C7C618 /* Frameworks */,
 				D689A92A21CC97F300C7C618 /* Resources */,
-				C6770F89296E69AA009B32F4 /* Embed Frameworks */,
+				B3EB2197908194C08C2D542B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,6 +388,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6CC61453168F6A27C89796E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TRTCDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0933EB6232110E700565F64 /* Download SDK */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,7 +426,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -e \"${PROJECT_DIR}/Pods\" ]; then\nif [ ! -e \"${PROJECT_DIR}/../SDK/TXLiteAVSDK_TRTC_Mac.framework\" ]; then\nURL=\"$(cat ../SDK/README.md | grep -o 'http.*bz2')\"\necho \"Downloading SDK from $URL\"\ncurl \"$URL\" --output ${PROJECT_DIR}/../SDK/TXLiteAVSDK_TRTC_Mac.tar.bz2\ncd ${PROJECT_DIR}/../SDK\ntar -zxvf TXLiteAVSDK_TRTC_Mac.tar.bz2\nmv ./TXLiteAVSDK_TRTC_Mac_*/SDK/*.framework .\nrm -rf TXLiteAVSDK_TRTC_Mac_*\nrm TXLiteAVSDK_TRTC_Mac.tar.bz2\nfi\nfi\n";
+			shellScript = "if [ ! -e \"${PROJECT_DIR}/Pods\" ]; then\nif [ ! -e \"${PROJECT_DIR}/../SDK/TXLiteAVSDK_TRTC_Mac.xcframework\" ]; then\nURL=\"$(cat ../SDK/README.md | grep -o 'http.*bz2')\"\necho \"Downloading SDK from $URL\"\ncurl \"$URL\" --output ${PROJECT_DIR}/../SDK/TXLiteAVSDK_TRTC_Mac.tar.bz2\ncd ${PROJECT_DIR}/../SDK\ntar -zxvf TXLiteAVSDK_TRTC_Mac.tar.bz2\nmv ./TXLiteAVSDK_TRTC_Mac_*/SDK/*.xcframework .\nrm -rf TXLiteAVSDK_TRTC_Mac_*\nrm TXLiteAVSDK_TRTC_Mac.tar.bz2\nfi\nfi\n";
+		};
+		B3EB2197908194C08C2D542B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRTCDemo/Pods-TRTCDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TRTCDemo/Pods-TRTCDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TRTCDemo/Pods-TRTCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -566,6 +599,7 @@
 		};
 		D689A94121CC97F400C7C618 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E977B39B967AE4CE58D55B /* Pods-TRTCDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -598,6 +632,7 @@
 		};
 		D689A94221CC97F400C7C618 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC30FB4479A04A44E35AF2C7 /* Pods-TRTCDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
