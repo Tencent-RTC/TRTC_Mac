@@ -4,7 +4,6 @@ platform :osx, '10.10'
 
 target 'TRTCDemo' do
 
-#pod 'TXLiteAVSDK_TRTC_Mac'
-pod 'TXLiteAVSDK_TRTC_Mac', :podspec =>'https://liteav.sdk.qcloud.com/pod/liteavsdkspec/TXLiteAVSDK_TRTC_Mac.podspec'
+pod 'TXLiteAVSDK_TRTC_Mac'
 
 end
