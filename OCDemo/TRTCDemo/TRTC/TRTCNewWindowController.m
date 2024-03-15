@@ -32,8 +32,8 @@
     if (_SDKAppID == 0) {
         [alertMessage appendString:@"请在 GenerateTestUserSig.h 中填写 _SDKAppID。"];
     }
-    if (_SECRETKEY.length == 0) {
-        [alertMessage appendString:@"请在 GenerateTestUserSig.h 中填写 _SECRETKEY。"];
+    if (_SDKSECRETKEY.length == 0) {
+        [alertMessage appendString:@"请在 GenerateTestUserSig.h 中填写 _SDKSECRETKEY。"];
     }
     if (alertMessage.length > 0) {
         NSAlert *alert = [[NSAlert alloc] init];
