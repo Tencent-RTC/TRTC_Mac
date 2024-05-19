@@ -16,14 +16,6 @@ enum AVCamSetupResult:Int32 {
 }
 
 /*
- 自定义视屏采集和渲染
- TRTC APP 支持自定义视频数据采集, 本文件展示如何使用AVFoundation库自定义采集数据
- 1、配置采集数据的输出设备和输入设备 API：configureSession()
- 2、将音视频输入输出设备添加到会话中 API：captureSession.addInput(audioDeviceInput)
-                                   captureSession.addOutput(videoOutput)
- 更多细节，详见：https://cloud.tencent.com/document/product/647/34066
- */
-/*
  Custom Video Capturing and Rendering
  TRTC app supports custom video data collection. This document shows how to use avfoundation library to customize data collection.
  1. Configure the output device and input device for data collection: configureSession()

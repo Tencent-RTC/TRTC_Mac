@@ -1,13 +1,13 @@
 /*
- * Module:   TRTCMainWindowController
+ * Module: TRTCMainWindowController
  *
- * Function: 使用TRTC SDK完成 1v1 和 1vn 的视频通话功能
+ * Function: Use TRTC SDK to complete 1v1 and 1vn video call functions
  *
- *    1. 支持九宫格平铺和前后叠加两种不同的视频画面布局方式，该部分由 _layoutInBounds 方法来计算每个视频画面的位置排布和大小尺寸
+ * 1. Supports two different video screen layout methods: nine-square tiles and front-to-back overlay. This part uses the _layoutInBounds method to calculate the position, arrangement and size of each video screen.
  *
- *    2. 支持对视频通话的分辨率、帧率和流畅模式进行调整，该部分由 TRTCSettingViewController 来实现
+ * 2. Supports adjusting the resolution, frame rate and smooth mode of video calls. This part is implemented by TRTCSettingViewController
  *
- *    3. 创建或者加入某一个通话房间，需要先指定 roomid 和 userid，这部分由 TRTCNewWindowController 来实现
+ * 3. To create or join a call room, you need to specify roomid and userid first. This part is implemented by TRTCNewWindowController
  */
 
 #import <Cocoa/Cocoa.h>
@@ -17,29 +17,29 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TRTCMainWindowController : NSWindowController
 
-/// 录屏预览窗口
+/// Screen recording preview window
 @property (strong) IBOutlet NSWindow *screenShareWindow;
 
-/// 跨房通话窗口
+/// Inter-room call window
 @property (strong) IBOutlet NSWindow *connectRoomWindow;
 @property (strong) NSString *connectRoomId;
 @property (strong) NSString *connectUserId;
 @property (assign, nonatomic, readonly) BOOL canConnectRoom;
 @property (assign, nonatomic) BOOL connectingRoom;
 
-/// 音频设备选则列表
+/// Audio device selection list
 @property (strong) IBOutlet NSTableView *audioSelectView;
 
-/// 视频设备选则列表
+/// Video equipment selection list
 @property (strong) IBOutlet NSTableView *videoSelectView;
 
-/// 美颜窗口
+/// beauty window
 @property (strong) IBOutlet NSPanel *beautyPanel;
 
-///是否开启美颜（磨皮）
+///Whether to turn on beauty treatment (dermabrasion)
 @property BOOL beautyEnabled;
 
-// 以下为美颜参数
+// The following are beauty parameters
 @property NSInteger beautyLevel;
 @property NSInteger rednessLevel;
 @property NSInteger whitenessLevel;

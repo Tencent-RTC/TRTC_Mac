@@ -8,10 +8,6 @@
 import Cocoa
 
 /*
-  RTC视频通话的入口页面（可以设置房间id和用户id）
-  RTC视频通话是基于房间来实现的，通话的双方要进入一个相同的房间id才能进行视频通话
-*/
-/*
  Room ID and user ID can be set on the RTC video call portal
  RTC video call is implemented based on room. Both parties must enter the same room ID to make a video call
 */

@@ -3,7 +3,7 @@
 //  TXLiteAVMacDemo
 //
 //  Created by ericxwli on 2018/10/10.
-//  Copyright © 2018年 Tencent. All rights reserved.
+//  Copyright © 2018 Tencent. All rights reserved.
 //
 
 #import "TRTCMainWindowController.h"
@@ -18,8 +18,8 @@
 #import "TRTCUserManager.h"
 #import <CommonCrypto/CommonCrypto.h>
 
-// TRTC的bizid的appid用于转推直播流，https://console.cloud.tencent.com/rav 点击【应用】【帐号信息】
-// 在【直播信息】中可以看到bizid和appid，分别填到下面这两个符号
+// The appid of TRTC's bizid is used to retweet the live stream, https://console.cloud.tencent.com/rav click [Application] [Account Information]
+// You can see bizid and appid in [Live Broadcast Information], fill in the two symbols below respectively
 #define TX_BIZID 0
 #define TX_APPID 0
 #define PLACE_HOLDER_LOCAL_MAIN   @"$PLACE_HOLDER_LOCAL_MAIN$"
@@ -47,19 +47,19 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
 {
     NSMutableDictionary *_mixTransCodeInfo;
 }
-/// TRTC SDK 实例对象
+/// TRTC SDK instance object
 @property(nonatomic,strong) TRTCCloud *trtcEngine;
 @property (nonatomic, strong) TRTCUserManager *userManager;
 
-// 进房参数
+// Room entry parameters
 @property(nonatomic,readonly,strong) TRTCParams *currentUserParam;
 @property(nonatomic,readonly,assign) TRTCAppScene scene;
 @property(nonatomic,readonly,assign) BOOL audioOnly;
 
-// 用于鼠标移出后隐藏菜单栏
+// Used to hide the menu bar after the mouse is moved out
 @property(nonatomic,strong) NSTrackingArea *trackingArea;
 
-// 视频容器
+// video container
 @property (weak) IBOutlet NSSplitView *splitView;
 @property (weak) IBOutlet NSView *videoLayoutView;
 @property (weak) IBOutlet TRTCMemberListView *memberListView;
@@ -84,22 +84,22 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
 @property(nonatomic,strong) NSMutableArray *speakerArr;
 @property(nonatomic,strong) NSMutableArray *cameraArr;
 
-// 1. 画廊模式, 2. 演讲者模式
+// 1. Gallery mode, 2. Speaker mode
 @property(nonatomic,assign) LayoutStyle layoutStyle;
-// 屏幕捕捉
+// screen capture
 @property(nonatomic,strong) TXCaptureSourceWindowController *captureSourceWindowController;
 @property(nonatomic,copy) NSString * presentingScreenCaptureUid;
 
-// 混流信息，key为uid value为roomId
+// Mixed flow information, key is uid and value is roomId
 @property(nonatomic, strong) NSMutableDictionary* pkInfos;
 
-// 正在进行的屏幕分享源
+// Ongoing screen sharing source
 @property(nonatomic, strong) TRTCScreenCaptureSourceInfo *screenCaptureInfo;
 
-// 显示屏幕分享按钮
+// Show screen sharing button
 @property (nonatomic, strong) NSTitlebarAccessoryViewController *titleBarAccessoryViewController;
 
-// 演讲者模式
+// speaker mode
 @property (weak) IBOutlet TRTCVideoListView *videoListView;
 @property (weak) IBOutlet NSLayoutConstraint *videoListTrailing;
 @property (weak) IBOutlet NSLayoutConstraint *videoListHeight;
@@ -150,10 +150,10 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     tableView.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
 }
 
-// 窗口加载后初始化控件
+// Initialize controls after window loading
 - (void)windowDidLoad {
     [super windowDidLoad];
-    // 重置美颜窗口位置与参数
+    // Reset the beauty window position and parameters
     NSRect frame = self.beautyPanel.frame;
     frame.origin.x = NSMinX(self.window.frame) - NSWidth(frame);
     frame.origin.y = NSMaxY(self.window.frame) - NSHeight(frame);
@@ -161,16 +161,16 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     self.beautyEnabled = YES;
     self.beautyLevel = self.rednessLevel = self.whitenessLevel = 5;
 
-    // 配置窗口信息
+    // Configure window information
     self.window.delegate = self;
     self.window.title = [NSString stringWithFormat:@"房间%u",self.roomID];
     self.window.backgroundColor = [NSColor whiteColor];
     
-    // 本地视频预览 View
+    // Local video preview View
     self.videoLayoutView.wantsLayer = YES;
     self.videoLayoutView.layer.backgroundColor = [NSColor colorWithRed:0.18 green:0.18 blue:0.18 alpha:1.0].CGColor;
     
-    // 底部工具栏
+    // bottom toolbar
     self.anchorFunctionBar.wantsLayer = true;
     self.anchorFunctionBar.layer.backgroundColor = [NSColor colorWithRed:0.18 green:0.18 blue:0.18 alpha:1.0].CGColor;
     self.functionBar.wantsLayer = true;
@@ -194,29 +194,29 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
                                                                  attributes:kButtonTitleAttr];
     }
 
-    // 配置底部工具栏自动隐藏
+    // Configure the bottom toolbar to automatically hide
     [self setupTrackingArea];
 
-    //音频选择列表
+    // audio selection list
     [self _configPopUpMenu:self.audioSelectView];
     self.audioSelectView.frame = CGRectMake(self.audioSelectView.frame.origin.x, self.audioSelectView.frame.origin.y, self.audioSelectView.frame.size.width, (self.micArr.count+self.speakerArr.count+1)*26);
     
     [self _configPopUpMenu:self.videoSelectView];
     self.videoSelectView.frame = CGRectMake(self.videoSelectView.frame.origin.x, self.videoSelectView.frame.origin.y, self.videoSelectView.frame.size.width, (self.micArr.count+1)*26);
     
-    // 侧边视频列表
+    // Side video list
     self.videoListView.delegate = self;
     [self.videoListView observeUserManager:self.userManager];
     [self.videoListView addObserver:self forKeyPath:@"tableHeight" options:NSKeyValueObservingOptionNew context:nil];
     
-    // 成员列表
+    // Member list
     [self.memberListView observeUserManager:self.userManager];
     self.memberListView.hidden = YES;
     
-    // 监听成员变化
+    // Monitor member changes
     [self.userManager addObserver:self forKeyPath:@"userConfigs" options:NSKeyValueObservingOptionNew context:nil];
     
-    // 进房
+    // Enter the room
     [self enterRoom];
 }
 
@@ -238,7 +238,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     [self updateVideoListHeight];
 }
 
-#pragma mark - 窗口标题
+#pragma mark - window title
 - (void)updateWindowTitle {
     NSString *title = [NSString stringWithFormat:@"房间%u",self.roomID];
     if (self.presentingScreenCaptureUid) {
@@ -262,7 +262,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
 }
 
 #pragma mark - Notification Observer
-//关闭窗口退出房间
+// Close the window and exit the room
 -(void)windowWillClose:(NSNotification *)notification{
     [self.trtcEngine exitRoom];
     [self.trtcEngine stopLocalPreview];
@@ -294,7 +294,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     return _currentUserParam.userId;
 }
 
-#pragma mark - 美颜参数更新
+#pragma mark - Beauty parameter update
 - (void)_updateBeautySettings {
     [self.trtcEngine setBeautyStyle:self.beautyStyle beautyLevel:self.beautyLevel whitenessLevel:self.whitenessLevel ruddinessLevel:self.rednessLevel];
 }
@@ -307,17 +307,17 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     return NO;
 }
 
-// 判断是否是当前使用的麦克
+// Determine whether it is the currently used microphone
 -(BOOL)isSelectedMicDevice:(NSString *)deviceId{
     return [[self.trtcEngine getCurrentMicDevice].deviceId isEqualToString:deviceId];
 }
 
-// 判断是否是当前使用的摄像头
+// Determine whether it is the currently used camera
 -(BOOL)isSelectedCameraDevice:(NSString *)deviceId{
     return [deviceId isEqualToString: [self.trtcEngine getCurrentCameraDevice].deviceId];
 }
 
-#pragma mark - 控制栏按钮操作
+#pragma mark - Control bar button operations
 - (IBAction)onClickAudioMute:(NSButton *)button {
     button.image = [NSImage imageNamed:AudioIcon[button.state]];
     button.attributedTitle = [[NSAttributedString alloc] initWithString:@[@"静音", @"解除静音"][button.state]
@@ -455,7 +455,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     [self.userManager muteAllRemoteAudio:mutesAudio];
 }
 
-#pragma makr - 跨房通话
+#pragma makr - Inter-room calls
 - (IBAction)onConnectAnotherRoom:(id)sender {
     [self.window beginSheet:self.connectRoomWindow completionHandler:^(NSModalResponse returnCode) {
     }];
@@ -500,12 +500,12 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     return [NSSet setWithObjects:@"connectingRoom", nil];
 }
 
-// 更新美颜设置
+// Update beauty settings
 - (void)didChangeValueForKey:(NSString *)key {
     [super didChangeValueForKey:key];
     if ([key isEqualToString:NSStringFromSelector(@selector(beautyEnabled))]) {
         if (!self.beautyEnabled) {
-            // 关闭美颜设置
+            // Turn off beauty settings
             [self.trtcEngine setBeautyStyle:self.beautyStyle beautyLevel:0 whitenessLevel:0 ruddinessLevel:0];
         }
     }
@@ -525,7 +525,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
                 nil];
     });
     if ([keys containsObject:key]) {
-        // 更新美颜设置参数
+        // Update beauty setting parameters
         [self _updateBeautySettings];
     }
 }
@@ -538,7 +538,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     return self.connectingRoom;
 }
 
-#pragma mark - 播放录屏
+#pragma mark - Play screen recording
 - (void)_playScreenCaptureForUser:(NSString *)userId {
     if (![self.presentingScreenCaptureUid isEqualToString:userId]) {
         [self.trtcEngine startRemoteSubStreamView:userId view:self.screenShareWindow.contentView];
@@ -548,7 +548,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     self.presentingScreenCaptureUid = userId;
 }
 
-#pragma mark - 错误与警告
+#pragma mark - Errors and warnings
 - (void)onError:(TXLiteAVError)errCode errMsg:(NSString *)errMsg extInfo:(NSDictionary *)extInfo {
     if (errCode == ERR_SERVER_CENTER_ANOTHER_USER_PUSH_SUB_VIDEO) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -566,9 +566,9 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
         [self exitRoom];
     }
 }
-#pragma mark - 进房与音视频事件
+#pragma mark - house entry and audio and video events
 /**
- * 加入视频房间：使用从 TRTCNewWindowController 实例化时传入的 TRTCParams
+ * Join the video room: use the TRTCParams passed in when instantiating from TRTCNewWindowController
  */
 - (void)enterRoom {
     TRTCParams *param = _currentUserParam;
@@ -597,7 +597,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
 
     [self.userManager addUser:self.userId];
 
-    // 开启视频采集预览
+    // Enable video capture preview
     if (!self.audioOnly) {
         [self.userManager setUser:self.userId videoAvailable:YES];
     } else {
@@ -710,7 +710,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     [self.trtcEngine exitRoom];
 }
 
-#pragma mark - 混流
+#pragma mark - mixed flow
 - (void)stopCloudMixTranscoding {
     _mixTransCodeInfo = [NSMutableDictionary dictionary];
     [self.trtcEngine setMixTranscodingConfig:nil];
@@ -733,7 +733,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     int videoWidth  = 720;
     int videoHeight = 1280;
     
-    // 小画面宽高
+    // Small screen width and height
     int subWidth  = 180;
     int subHeight = 320;
     
@@ -831,9 +831,10 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     config.audioBitrate = 64;
     config.audioChannels = 1;
     
-    // 设置混流后主播的画面位置
+    // Set the anchor’s screen position after mixing
     TRTCMixUser* broadCaster = [TRTCMixUser new];
-    broadCaster.userId = mixMode == TRTCTranscodingConfigMode_Template_PresetLayout ? PLACE_HOLDER_LOCAL_MAIN : self.currentUserParam.userId; // 以主播uid为broadcaster为例
+    broadCaster.userId = mixMode == TRTCTranscodingConfigMode_Template_PresetLayout ?
+            PLACE_HOLDER_LOCAL_MAIN : self.currentUserParam.userId; // Take the anchor uid as broadcaster as an example
     broadCaster.zOrder = 0;
     broadCaster.rect = CGRectMake(0, 0, videoWidth, videoHeight);
     broadCaster.roomID = nil;
@@ -841,7 +842,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     NSMutableArray* mixUsers = [NSMutableArray new];
     [mixUsers addObject:broadCaster];
     
-    // 设置混流后各个小画面的位置
+    // Set the position of each small picture after mixing
     NSDictionary* pkUsers = self.pkInfos;
     int i = 0;
     
@@ -872,7 +873,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     [_trtcEngine setMixTranscodingConfig:config];
 }
 
-#pragma makr - 角色变化
+#pragma makr - role changes
 - (void)roleChanged:(BOOL)isAudience {
     [self.userManager setUser:self.userId videoAvailable:!isAudience];
     [self.userManager setUser:self.userId audioAvailable:!isAudience];
@@ -880,7 +881,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     
 }
 
-#pragma mark - 画面布局渲染
+#pragma mark - Screen layout rendering
 
 - (void)updateLayoutVideoFrame {
     if (self.layoutStyle == LayoutStyleGalleryView) {
@@ -928,7 +929,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     [self.videoListView reloadData];
 }
 
-#pragma mark - 连麦回调
+#pragma mark - Lianmai callback
 - (void)onConnectOtherRoom:(NSString*)userId errCode:(TXLiteAVError)errCode errMsg:(nullable NSString *)errMsg;
 {
     if (errCode != 0) {
@@ -948,7 +949,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     self.connectingRoom = NO;
 }
 
-#pragma mark - 音频设备列表
+#pragma mark - Audio device list
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     if (tableView == self.audioSelectView) {
         return self.micArr.count + self.speakerArr.count + 1;
@@ -1109,7 +1110,7 @@ typedef NS_ENUM(NSUInteger, LayoutStyle) {
     [audioArr addObject:@"音频设置"];
     id object = [audioArr objectAtIndex:row];
     if ([object isKindOfClass:[TRTCMediaDeviceInfo class]]) {
-        //选择默认设备
+        // Select default device
         TRTCMediaDeviceInfo *source = (TRTCMediaDeviceInfo *)object;
         if ([self.micArr containsObject:object] ) {
             [self.trtcEngine setCurrentMicDevice:source.deviceId];

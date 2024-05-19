@@ -1,25 +1,25 @@
 /*
- * Module:   TRTCNewWindowController
+ * Module: TRTCNewWindowController
  *
- * Function: 该界面可以让用户输入一个【房间号】和一个【用户名】
+ * Function: This interface allows the user to enter a [room number] and a [user name]
  *
  * Notice:
  *
- *  （1）房间号为数字类型，用户名为字符串类型
+ * (1) The room number is of numeric type, and the user name is of string type.
  *
- *  （2）在真实的使用场景中，房间号大多不是用户手动输入的，而是由后台业务服务器直接分配的，
- *       比如视频会议中的会议号是会控系统提前预定好的，客服系统中的房间号也是根据客服员工的工号决定的。
+ * (2) In real usage scenarios, most room numbers are not manually entered by users, but are directly assigned by the backend business server.
+ * For example, the conference number in the video conference is pre-booked by the conference control system, and the room number in the customer service system is also determined based on the customer service employee's work number.
  */
 
 #import <Cocoa/Cocoa.h>
 #import "TRTCMainWindowController.h"
 #import "SDKHeader.h"
-// 登录
+// Log in
 @interface TRTCNewWindowController : NSWindowController
 {
     TRTCMainWindowController *_wc;
 }
-// 房间号输入框
+// Room number input box
 @property (strong) IBOutlet NSTextField *roomidField;
 @property (strong) IBOutlet NSTextField *useridField;
 @property BOOL audioOnly;

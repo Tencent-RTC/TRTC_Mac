@@ -62,10 +62,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setRemoteNetQuality:(NSArray<TRTCQualityInfo *> *)remoteQuality;
 
-/// 临时停止掉界面上不出现的视频
+/// Temporarily stop videos that do not appear on the interface
 - (void)hideRenderViewExceptUser:(NSString *)userId;
 
-/// 恢复临时停止的视频
+/// Resume temporarily stopped video
 - (void)recoverAllRenderViews;
 
 @end

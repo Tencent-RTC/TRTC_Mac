@@ -10,16 +10,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- 本地媒体录制示例
- TRTC APP 支持本地媒体录制功能
- 本文件展示如何集成本地媒体录制功能
- 1、进入TRTC房间。 API:trtcCloud.enterRoom(params, appScene: .videoCall)
- 2、开启本地录制。  API:trtcCloud.startLocalRecording(recordParams)
- 3、结束本地录制。  API:trtcCloud.stopLocalRecording()
- 4、设置TRTC的关键代码。  API：viewWillAppear()
- 参考文档：https://cloud.tencent.com/document/product/647/32258
- */
-/*
  Local Recording
  The TRTC app supports local recording.
  This document shows how to integrate the local recording feature.

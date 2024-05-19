@@ -1,14 +1,14 @@
 /*
- * Module:   TRTCNewWindowController
+ * Module: TRTCNewWindowController
  *
- * Function: 该界面可以让用户输入一个【房间号】和一个【用户名】
+ * Function: This interface allows the user to enter a [room number] and a [user name]
  *
  * Notice:
  *
- *  （1）房间号为数字类型，用户名为字符串类型
+ * (1) The room number is of numeric type, and the user name is of string type.
  *
- *  （2）在真实的使用场景中，房间号大多不是用户手动输入的，而是系统分配的，
- *       比如视频会议中的会议号是会控系统提前预定好的，客服系统中的房间号也是根据客服员工的工号决定的。
+ * (2) In real usage scenarios, most room numbers are not manually entered by the user, but assigned by the system.
+ * For example, the conference number in the video conference is pre-booked by the conference control system, and the room number in the customer service system is also determined based on the customer service employee's work number.
  */
 
 #import "TRTCNewWindowController.h"
@@ -74,19 +74,19 @@
 }
 
 /**
- *  Function: 读取用户输入，并创建（或加入）音视频房间
+ * Function: Read user input and create (or join) audio and video rooms
  *
- *  此段示例代码最主要的作用是组装 TRTC SDK 进房所需的 TRTCParams
+ * The main function of this sample code is to assemble the TRTCParams required by TRTC SDK to enter the room.
  *
- *  TRTCParams.sdkAppId => 可以在腾讯云实时音视频控制台（https://console.cloud.tencent.com/rav）获取
- *  TRTCParams.userId   => 此处即用户输入的用户名，它是一个字符串
- *  TRTCParams.roomId   => 此处即用户输入的音视频房间号，比如 125
- *  TRTCParams.userSig  => 此处示例代码展示了两种获取 usersig 的方式，一种是从【控制台】获取，一种是从【服务器】获取
+ * TRTCParams.sdkAppId => Can be obtained from Tencent Cloud real-time audio and video console (https://console.cloud.tencent.com/rav)
+ * TRTCParams.userId => This is the username entered by the user, which is a string
+ * TRTCParams.roomId => This is the audio and video room number entered by the user, such as 125
+ * TRTCParams.userSig => The sample code here shows two ways to obtain usersig, one is to obtain it from [Console] and the other is to obtain it from [Server]
  *
- * （1）控制台获取：可以获得几组已经生成好的 userid 和 usersig，他们会被放在一个 json 格式的配置文件中，仅适合调试使用
- * （2）服务器获取：直接在服务器端用我们提供的源代码，根据 userid 实时计算 usersig，这种方式安全可靠，适合线上使用
+ * (1) Console acquisition: You can obtain several groups of generated userids and usersig. They will be placed in a json format configuration file, which is only suitable for debugging.
+ * (2) Server acquisition: Use the source code we provide directly on the server side to calculate usersig in real time based on userid. This method is safe and reliable and suitable for online use.
  *
- *  参考文档：https://cloud.tencent.com/document/product/647/17275
+ * Reference document: https://cloud.tencent.com/document/product/647/17275
  */
 - (IBAction)enter:(id)sender {
     if (self.roomidField.stringValue.length == 0) {

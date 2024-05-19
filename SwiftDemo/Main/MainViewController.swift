@@ -7,9 +7,7 @@
 
 import Cocoa
 
-/*
- 本文件列举了各功能模块，旨在通过button进行各功能模块点击转移
- */
+
 /*
  This file lists each function module, aiming to transfer each function module by clicking the button
 */
