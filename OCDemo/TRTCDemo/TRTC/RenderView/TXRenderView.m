@@ -11,17 +11,17 @@
 
 @interface TXRenderView ()
 
-// 视频页面
+// Video page
 @property (weak) IBOutlet NSView *contentView;
 
-// 左下角的用户信息
+// User information in the lower left corner
 @property (weak) IBOutlet NSView *userInfoView;
 @property (weak) IBOutlet NSTextField *nameLabel;
 @property (weak) IBOutlet NSImageView *audioStateView;
 @property (weak) IBOutlet NSLevelIndicator *volumeView;
 @property (weak) IBOutlet NSImageView *signalView;
 
-// 右上角的功能栏
+// Function bar in the upper right corner
 @property (weak) IBOutlet NSStackView *functionBar;
 @property (weak) IBOutlet NSButton *rotateButton;
 @property (weak) IBOutlet NSButton *streamButton;
@@ -29,7 +29,7 @@
 @property (weak) IBOutlet NSButton *muteAudioButton;
 @property (weak) IBOutlet NSButton *toggleFillModeButton;
 
-// 无画面时显示的用户信息
+// User information displayed when there is no screen
 @property (weak) IBOutlet NSImageView *avatarView;
 
 @property (nonatomic) TRTCVideoRotation rotation;

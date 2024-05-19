@@ -9,13 +9,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- RTC视频通话的主页面
- 包含如下简单功能：
- - 进入/退出视频通话房间
- - 打开/关闭摄像头
- - 打开/关闭麦克风
-*/
-/*
  The main page of an RTC video call
  Contains the following simple functions:
  - Enter/exit the video call room

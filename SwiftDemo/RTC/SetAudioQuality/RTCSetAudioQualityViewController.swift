@@ -10,14 +10,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
-设置音频质量功能
- TRTC APP 设置音频质量功能
- 本文件展示如何集成设置音频质量功能
- 1、设置音频质量 API: trtcCloud.startLocalAudio(.music)
- 2、设置TRTC的关键代码 API：viewWillAppear()
- 参考文档：https://cloud.tencent.com/document/product/647/32258
- */
-/*
  Setting Audio Quality
   TRTC Audio Quality Setting
   1. Set audio quality: trtcCloud.startLocalAudio(.music)

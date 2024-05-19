@@ -9,13 +9,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- 屏幕分享功能示例
- TRTC APP 支持设置屏幕分享功能
- 本文件展示如何集成设置屏幕分享功能
- 1、进入TRTC房间     API:trtcCloud.enterRoom(param, appScene: .videoCall)
- 2、打开屏幕分享功能  API:onShareScreenClicked(_ sender: NSButton)
- */
-/*
  Example of screen sharing
  TRTC APP supports setting screen sharing function
  This document shows how to integrate screen sharing

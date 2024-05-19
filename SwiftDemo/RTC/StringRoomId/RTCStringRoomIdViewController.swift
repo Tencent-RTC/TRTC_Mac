@@ -10,15 +10,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- 字符串房间号功能示例
- TRTC APP 支持字符串房间号功能
- 本文件展示如何集成字符串房间号功能
- 1、设置字符串房间号 API: param.roomId = UInt32((roomId as NSString).intValue)
- 2、进入TRTC房间 API: trtcCloud.enterRoom(params, appScene: .LIVE)
- 3、设置TRTC的关键代码 API: viewWillAppear()
- 参考文档：https://cloud.tencent.com/document/product/647/32258
- */
-/*
  String-type Room ID
  The TRTC app supports string-type room IDs.
  This document shows how to enable string-type room IDs in your project.

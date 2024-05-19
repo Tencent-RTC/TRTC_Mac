@@ -3,10 +3,10 @@
 //  TXLiteAVMacDemo
 //
 //  Created by ericxwli on 2018/10/17.
-//  Copyright © 2018年 Tencent. All rights reserved.
+//  Copyright © 2018 Tencent. All rights reserved.
 //
 
-// 用于对视频通话的分辨率、帧率和流畅模式进行调整，并支持记录下这些设置项
+// Used to adjust the resolution, frame rate and smooth mode of video calls, and supports recording these settings
 
 #import <Cocoa/Cocoa.h>
 #import "SDKHeader.h"
@@ -38,78 +38,78 @@ typedef NS_ENUM(NSUInteger, TXAVSettingTabIndex) {
 @property (nonatomic, strong, nullable) NSString *userID;
 @property (nonatomic, strong, nullable) NSString *roomID;
 
-// 通话场景按钮
+// Call scene button
 @property (strong) IBOutlet NSButton *callSceneButton;
-// 直播场景按钮
+// Live scene button
 @property (strong) IBOutlet NSButton *liveSceneButton;
 
-// 优先流畅按钮
+// Prioritize smooth button
 @property (strong) IBOutlet NSButton *smoothBtn;
-// 优先清晰按钮
+//Prioritize clear button
 @property (strong) IBOutlet NSButton *clearBtn;
 
-// 客户端控
+//Client control
 @property (strong) IBOutlet NSButton *clientBtn;
-// 云控
+// Cloud control
 @property (strong) IBOutlet NSButton *cloudBtn;
 
-// 横屏
+// Horizontal screen
 @property (strong) IBOutlet NSButton *portraitResolutionBtn;
 @property (strong) IBOutlet NSButton *landscapeResolutionBtn;
-// 竖屏
+//vertical screen
 
-// 通用设置界面
+//General settings interface
 @property (strong) IBOutlet NSView *generalSettingView;
 
-// 音频设置界面
+//Audio setting interface
 @property (strong) IBOutlet NSView *audioSettingView;
-// 视频设置界面
+//Video setting interface
 @property (strong) IBOutlet NSView *videoSettingView;
-// 设置界面容器
+//Set interface container
 @property (strong) IBOutlet NSView *settingField;
-// 视频设置界面预览视图
+// Video settings interface preview view
 @property (strong) IBOutlet NSView *cameraPreview;
-// 左边菜单
+// left menu
 @property (strong) IBOutlet NSTableView *sidebarMenu;
-// 当前选中视频还是音频
+//Whether video or audio is currently selected
 @property (assign, nonatomic) TXAVSettingTabIndex tabIndex;
-// 摄像头选择控件
+//Camera selection control
 @property (strong) IBOutlet NSPopUpButton *cameraItems;
-// 扬声器选择控件
+// Speaker selection control
 @property (strong) IBOutlet NSPopUpButton *speakerItems;
-// 麦克风选择控件
+// Microphone selection control
 @property (strong) IBOutlet NSPopUpButton *micItems;
-// 分辨率选择控件
+//Resolution selection control
 @property (strong) IBOutlet NSPopUpButton *resolutionItems;
-// fps选择控件
+// fps selection control
 @property (strong) IBOutlet NSPopUpButton *fpsItems;
-// 码率显示
+// code rate display
 @property (strong) IBOutlet NSTextField *bitrateLabel;
-// 码率滑杆
+// code rate slider
 @property (strong) IBOutlet NSSlider *bitrateSlider;
-// 麦克风音量滑杆
+//Microphone volume slider
 @property (strong) IBOutlet NSSlider *micVolumeSlider;
-// 扬声器音量滑杆
+// Speaker volume slider
 @property (strong) IBOutlet NSSlider *speakerVolumeSlider;
-// 录音音量指示器
+//Recording volume indicator
 @property (weak) IBOutlet NSLevelIndicator *volumeMeter;
-// 扬声器音量指示器
+// Speaker volume indicator
 @property (weak) IBOutlet NSLevelIndicator *speakerVolumeMeter;
-// 分享按钮
+// Share button
 @property (weak) IBOutlet NSButton *shareButton;
-// 设置BGM播放音量
+//Set BGM playback volume
 @property (strong) IBOutlet NSSlider *BGMVolumeSlider;
-// 设置BGM远端播放音量
+//Set BGM remote playback volume
 @property (strong) IBOutlet NSSlider *BGMPublishVolumeSlider;
-// 设备BGM本地播放音量
+//Device BGM local playback volume
 @property (strong) IBOutlet NSSlider *BGMPlayoutVolumeSlider;
 
 // For Cocoa Bindings
-// 推流设置
+// Push settings
 @property (assign, nonatomic) BOOL pushDoubleStream;
 @property (assign, nonatomic) BOOL playSmallStream;
 @property (assign, nonatomic) BOOL showVolume;
-// 开启云端混流
+// Enable cloud mixing
 @property (assign, nonatomic) TRTCTranscodingConfigMode mixMode;
 @property (assign, nonatomic) BOOL isAudience;
 
@@ -126,25 +126,25 @@ typedef NS_ENUM(NSUInteger, TXAVSettingTabIndex) {
 - (IBAction)onSelectSpeaker:(id)sender;
 
 - (IBAction)onSelectMic:(id)sender;
-// 更改扬声器音量
+//Change speaker volume
 - (IBAction)onSpeakerVolumChange:(id)sender;
-// 更改麦克风音量
+//Change microphone volume
 - (IBAction)onMicVolumChange:(id)sender;
-// 分辨率选则
+// Resolution selection
 - (IBAction)onSelectResolution:(id)sender;
-// 帧率选则
+// Frame rate selection
 - (IBAction)onSelectFps:(NSPopUpButton *)sender;
-// 比特率选则
+//bitrate selection
 - (IBAction)onSelectBitrate:(id)sender;
-// 麦克风测试
+// Microphone test
 - (IBAction)onClickMicTest:(id)sender;
-// 开始扬声器测试
+// Start speaker test
 - (IBAction)onClickSpeakerTest:(NSButton *)sender;
-// 更改流控模式，流畅还是清晰
+//Change the flow control mode, smooth or clear
 - (IBAction)onClickQOSPreference:(NSButton *)sender;
-//  更改流控方式，使用SDK固定配置还是使用下发配置
+// Change the flow control method, use SDK fixed configuration or use distributed configuration
 - (IBAction)onClickQOSControlMode:(NSButton *)sender;
-// 响应分享播放地址按钮
+//Response to share play address button
 - (IBAction)onClickShowCloudMixURL:(id)sender;
 @end
 

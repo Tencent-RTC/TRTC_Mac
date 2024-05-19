@@ -9,11 +9,6 @@
 import Cocoa
 import TXLiteAVSDK_TRTC_Mac
 
-/*自定义视屏采集和渲染
-  TRTC APP 支持自定义视频数据采集, 本文件展示如何自定义渲染采集到的数据
-  1、采集到的数据进行自定义渲染 API：onRenderVideoFrame()
-  更多细节，详见：https://cloud.tencent.com/document/product/647/34066
-*/
 /*
 Custom Video Capturing and Rendering
 TRTC APP supports custom video data collection. This document shows how to customize the data collected by rendering.

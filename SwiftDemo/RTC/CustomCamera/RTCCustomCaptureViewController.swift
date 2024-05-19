@@ -10,14 +10,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- 自定义视屏采集和渲染示例
- TRTC APP 支持自定义视频数据采集, 本文件展示如何发送自定义采集数据
- 1、进入TRTC房间     API:trtcCloud.enterRoom(params, appScene: .LIVE)
- 2、打开自定义采集功能 API:trtcCloud.enableCustomVideoCapture(.big, enable: true)
- 3、发送自定义采集数据 API:trtcCloud.enableCustomVideoCapture(.big, enable: true)
- 更多细节，详见：https://cloud.tencent.com/document/product/647/34066
- */
-/*
  Custom Video Capturing and Rendering
  The TRTC app supports custom video capturing and rendering. This document shows how to send custom video data.
  1. Enter a room: trtcCloud.enterRoom(params, appScene: .LIVE)

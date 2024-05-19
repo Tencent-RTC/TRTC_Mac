@@ -3,10 +3,10 @@
 //  TXLiteAVMacDemo
 //
 //  Created by ericxwli on 2018/10/17.
-//  Copyright © 2018年 Tencent. All rights reserved.
+//  Copyright © 2018 Tencent. All rights reserved.
 //
 //
-// 用于对视频通话的分辨率、帧率和流畅模式进行调整，并支持记录下这些设置项
+// Used to adjust the resolution, frame rate and smooth mode of video calls, and supports recording these settings
 
 #import "TRTCSettingWindowController.h"
 #import "GenerateTestUserSig.h"
@@ -54,35 +54,35 @@ static NSArray *defaultKeys;
 
 @implementation TRTCSettingWindowController
 
-// 生成配置项的UserDefaults Key以及对应的accessor
+// Generate the UserDefaults Key of the configuration item and the corresponding accessor
 
-// 场景
+// Scenes
 DECL_DEFAULT_KEY(TRTCAppScene, Scene, scene)
 
-// 是否显示音量
+// Whether to display volume
 DECL_DEFAULT_KEY(BOOL, ShowVolume, showVolume)
-// 是否开启云端画面混合
+// Whether to enable cloud screen mixing
 DECL_DEFAULT_KEY(TRTCTranscodingConfigMode, MixMode, mixMode)
-// 是否观众角色
+// Whether the audience role
 DECL_DEFAULT_KEY(BOOL, IsAudience, isAudience)
-// 分辨率模式
+// resolution mode
 DECL_DEFAULT_KEY(TRTCVideoResolutionMode, ResolutionMode, resolutionMode);
-// 大小流
+// Large and small flows
 DECL_DEFAULT_KEY(int, Fps, fps)
 DECL_DEFAULT_KEY(TRTCVideoResolution, Resolution, resolution)
 DECL_DEFAULT_KEY(int, Bitrate, bitrate)
 DECL_DEFAULT_KEY(TRTCVideoQosPreference, QosPreference, qosPreference)
 DECL_DEFAULT_KEY(TRTCQosControlMode, QosControlMode, qosControlMode)
 
-// 是否保存配置。当设置为不保存时应用退出后所有设置将被恢复
+// Whether to save the configuration. When set to not save, all settings will be restored after the app exits.
 DECL_DEFAULT_KEY(BOOL, ShouldSaveToDefaults, shouldSaveToDefaults)
 
-// 推拉流类型配置
+// Push and pull flow type configuration
 DECL_DEFAULT_KEY(BOOL, PushDoubleStream, pushDoubleStream)
 DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
 
 + (void)load {
-    // 默认配置表
+    // Default configuration table
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *defaultValues = @{
                                  DefaultKeyShouldSaveToDefaults: @(YES),
@@ -105,7 +105,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
                                  };
     [userDefaults registerDefaults:defaultValues];
     defaultKeys = defaultValues.allKeys;
-    // 将设置导入静态变量
+    // Import settings into static variables
     for (NSString *key in defaultValues) {
         NSString *sel = [[key stringByReplacingOccurrencesOfString:@"TRTC_" withString:@"set"] stringByAppendingString:@":"];
         void(*setProperty)(id, SEL, NSInteger) = (void(*)(id, SEL, NSInteger))objc_msgSend;
@@ -126,7 +126,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
 {
     [super awakeFromNib];
     [self.shareButton sendActionOn:NSLeftMouseDownMask];
-    // 初始化界面数据
+    // Initialize interface data
     [self setup];
 }
 
@@ -228,7 +228,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
                     [[TRTCSettingBitrateTable alloc] initWithResolution:TRTCVideoResolution_960_540 defaultBitrate:800 minBitrate:400 maxBitrate:1600 step:50],
                     [[TRTCSettingBitrateTable alloc] initWithResolution:TRTCVideoResolution_1280_720 defaultBitrate:1150 minBitrate:500 maxBitrate:2000 step:50]];
     
-    // 配置场景
+    // Configure scenarios
     if (self.class.scene == TRTCAppSceneVideoCall) {
         self.callSceneButton.state = NSOnState;
         self.roleBox.hidden = YES;
@@ -249,27 +249,27 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     self.landscapeResolutionBtn.tag = TRTCVideoResolutionModeLandscape;
     self.portraitResolutionBtn.tag  = TRTCVideoResolutionModePortrait;
     
-    // 配置摄像头选择
+    // Configure camera selection
     [self.cameraItems removeAllItems];
     [self.cameraItems addItemsWithTitles:[cameras valueForKey:@"deviceName"]];
     NSUInteger selected = [cameras indexOfObject:[self.trtcEngine getCurrentCameraDevice]];
     [self.cameraItems selectItemAtIndex:selected == NSNotFound ? 0 : selected];
     
-    // 配置麦克风选择
+    // Configure microphone selection
     NSArray *micList = [self.trtcEngine getMicDevicesList];
     [self.micItems removeAllItems];
     [self.micItems addItemsWithTitles:[micList valueForKey:@"deviceName"]];
     NSUInteger micSelected = [micList indexOfObject:[self.trtcEngine getCurrentMicDevice]];
     [self.micItems selectItemAtIndex:micSelected == NSNotFound ? 0 : micSelected];
     
-    // 配置扬声器选择
+    // Configure speaker selection
     NSArray *speakerList = [self.trtcEngine getSpeakerDevicesList];
     [self.speakerItems removeAllItems];
     [self.speakerItems addItemsWithTitles:[speakerList valueForKey:@"deviceName"]];
     NSUInteger speakerSelected = [speakerList indexOfObject:[self.trtcEngine getCurrentSpeakerDevice]];
     [self.speakerItems selectItemAtIndex:speakerSelected == NSNotFound ? 0 : speakerSelected];
     
-    // 配置分辨率选择
+    // Configure resolution selection
     [self.resolutionItems removeAllItems];
     NSString *resolution = [self resolutionString:[[self class] resolution]];
     [self.resolutionItems addItemsWithTitles:resolutionArr];
@@ -282,16 +282,16 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     self.bitrateSlider.maxValue = config.maxBitrate;
     [self _setBitRate:[[self class] bitrate]];
 
-    // 配置fps
+    // Configure fps
     [self.fpsItems removeAllItems];
     [self.fpsItems addItemsWithTitles:fpsArr];
     [self.fpsItems selectItemAtIndex:[fpsArr indexOfObject:[NSString stringWithFormat:@"%dfps", [[self class] fps]]]];
     
-    // 配置音量
+    // Configure volume
     self.micVolumeSlider.floatValue = [self.trtcEngine getCurrentMicDeviceVolume];
     self.speakerVolumeSlider.floatValue = [self.trtcEngine getCurrentSpeakerDeviceVolume];
     
-    // 配置清晰流畅
+    // Clear and smooth configuration
     if (TRTCSettingWindowController.qosPreference == TRTCVideoQosPreferenceSmooth) {
         self.smoothBtn.state = NSControlStateValueOn;
     } else {
@@ -303,20 +303,20 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
         self.cloudBtn.state  = NSControlStateValueOn;
     }
     
-    // 添加设置界面
+    // Add setting interface
     for (NSView *v in @[self.generalSettingView, self.videoSettingView, self.audioSettingView]) {
         [self.settingField addSubview:v];
     }
 
-    // 配置侧栏菜单
+    // Configure sidebar menu
     [self _configureSidebarMenu];
 }
 
 - (IBAction)showWindow:(id)sender {
     [super showWindow:sender];
-    // 开始相机测试
+    // Start camera test
     [self _updateVideoConfig];
-    // 更新界面数据
+    // Update interface data
     self.micVolumeSlider.floatValue = [self.trtcEngine getCurrentMicDeviceVolume] / 100.f;
     self.speakerVolumeSlider.floatValue = [self.trtcEngine getCurrentSpeakerDeviceVolume] / 100.f;
 }
@@ -424,21 +424,21 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     [self.trtcEngine setCurrentMicDevice:selecteDevice.deviceId];
 }
 
-// 更改扬声器音量
+// Change speaker volume
 - (IBAction)onSpeakerVolumChange:(id)sender {
     NSSlider *slider = sender;
     float fvalue = slider.floatValue;
     [self.trtcEngine setCurrentSpeakerDeviceVolume:fvalue * 100];
 }
 
-// 更改麦克风音量
+// Change microphone volume
 - (IBAction)onMicVolumChange:(id)sender {
     NSSlider *slider = sender;
     float fvalue = slider.floatValue;
     [self.trtcEngine setCurrentMicDeviceVolume:fvalue * 100];
 }
 
-// 分辨率选则
+// Resolution selection
 - (IBAction)onSelectResolution:(id)sender {
     NSInteger index = self.resolutionItems.indexOfSelectedItem;
     TRTCSettingBitrateTable *config = _paramArray[index];
@@ -459,7 +459,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
 }
 
 
-// 帧率选则
+// Frame rate selection
 - (IBAction)onSelectFps:(NSPopUpButton *)sender {
     NSInteger fpsIndex = sender.indexOfSelectedItem;
     int fps = 0;
@@ -474,7 +474,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     [self _updateVideoConfig];
 }
 
-// 比特率选则
+// Bit rate selection
 - (IBAction)onSelectBitrate:(id)sender {
     NSSlider *slider = sender;
     int value = slider.intValue;
@@ -483,7 +483,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     [self _updateVideoConfig];
 }
 
-// 麦克风测试
+// Microphone test
 - (IBAction)onClickMicTest:(id)sender {
     NSButton *btn = (NSButton *)sender;
     if (btn.state == 1) {
@@ -502,7 +502,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     }
 }
 
-// 开始扬声器测试
+// Start speaker test
 - (IBAction)onClickSpeakerTest:(NSButton *)sender {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp3"];
     
@@ -560,14 +560,14 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     [self.trtcEngine setBGMPlayoutVolume:(slider.floatValue * 100)];
 }
 
-// 更改流控模式，流畅还是清晰
+// Change the flow control mode, smooth or clear
 - (IBAction)onClickQOSPreference:(NSButton *)sender {
     TRTCVideoQosPreference preference = sender.tag == 0 ? TRTCVideoQosPreferenceSmooth : TRTCVideoQosPreferenceClear;
     self.class.qosPreference = preference;
     [self _updateQOSParam];
 }
 
-//  更改流控方式，使用SDK固定配置还是使用下发配置
+// Change the flow control method, use SDK fixed configuration or use distributed configuration
 - (IBAction)onClickQOSControlMode:(NSButton *)sender {
     TRTCQosControlMode mode = sender.tag == 0 ? TRTCQosControlModeClient : TRTCQosControlModeServer;
     self.class.qosControlMode = mode;
@@ -657,7 +657,7 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     return @"";
 }
 
-#pragma mark - 数据更新
+#pragma mark - Data Update
 - (void)_updateVideoConfig {
     NSInteger resolutionIndex = [self.resolutionItems indexOfSelectedItem];
     
@@ -691,13 +691,13 @@ DECL_DEFAULT_KEY(BOOL, PlaySmallStream, playSmallStream)
     [self.trtcEngine setNetworkQosParam:param];
 }
 
-// 更新麦克音量指示器
+// Updated microphone volume indicator
 - (void)_updateInputVolume:(NSInteger)volume {
     // volume range: 0~100
     self.volumeMeter.doubleValue = volume / 10.0 ;
 }
 
-// 更新扬声器音量指示器
+// Update speaker volume indicator
 - (void)_updateOutputVolume:(NSInteger)volume {
     self.speakerVolumeMeter.doubleValue = volume / 255.0 * 10;
 }

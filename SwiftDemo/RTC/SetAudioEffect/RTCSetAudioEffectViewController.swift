@@ -10,15 +10,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- 设置音效功能示例
- TRTC APP 支持设置音效功能
- 本文件展示如何集成设置音效功能
- 1、进入TRTC房间  API: trtcCloud.enterRoom(param, appScene: .LIVE)
- 2、选择变声  API: trtcCloud.sharedInstance().getAudioEffectManager().setVoiceChangerType(voicechange)
- 3、选择混响  API: trtcCloud.sharedInstance().getAudioEffectManager().setVoiceReverbType(reverb)
- 参考文档：https://cloud.tencent.com/document/product/647/32258
- */
-/*
  Setting Audio Effects
  The TRTC app supports audio effect setting.
  This document shows how to integrate the audio effect setting feature.

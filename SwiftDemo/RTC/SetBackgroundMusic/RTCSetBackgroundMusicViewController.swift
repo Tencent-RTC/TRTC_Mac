@@ -10,17 +10,6 @@ import TXLiteAVSDK_TRTC_Mac
 import Cocoa
 
 /*
- 设置背景音乐功能示例
- TRTC APP 支持设置背景音乐功能
- 本文件展示如何集成设置背景音乐功能
- 1、进入TRTC房间 API: trtcCloud.enterRoom(params, appScene: .LIVE)
- 2、播放背景音乐 API:
- trtcCloud.getAudioEffectManager().startPlayMusic(bgmParam) { errCode in } onProgress: { progressMs, durationMs in } onComplete: { errCode in }
- 3、设置TRTC的关键代码 API: startPushStream()
- API:trtcCloud.getAudioEffectManager().startPlayMusic(bgmParam) { errCode in } onProgress: { progressMs, durationMs in } onComplete: { errCode in }
- 参考文档：https://cloud.tencent.com/document/product/647/32258
- */
-/*
  Setting Background Music
  The TRTC app supports background music setting.
  This document shows how to integrate the background music setting feature.
